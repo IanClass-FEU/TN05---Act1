@@ -8,21 +8,44 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: black; /* Black background */
-    color: white; /* White text by default */
+    background-color: black; /* Default background color */
+    color: white; /* White text */
 }
 
+/* Wrapper for Header and Hero Section */
+.header-hero-wrapper {
+    background-image: url('../img/2.png'); /* Path to your background image */
+    background-size: cover; /* Cover the entire wrapper */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    min-height: 100vh; /* Ensure it covers the viewport */
+}
 
 /* Hero Section */
+/* Hero Section */
 .hero {
-    background-image: url('../img/back.jpg'); /* Background image URL */
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+
     color: white; /* White text */
     text-align: center;
     padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+/* Hero Image */
+.hero-image {
+    position: absolute; /* Position the image absolutely */
+    right: 20px; /* Position the image 20px from the right */
+    top: 50%; /* Position the image vertically centered */
+    transform: translateY(-50%); /* Adjust image position to truly center it vertically */
+    max-width: 40%; /* Adjust width based on your needs */
+    height: auto;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for better visibility */
+}
+
 
 
 .cta-button {

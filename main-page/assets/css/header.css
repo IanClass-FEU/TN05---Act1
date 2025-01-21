@@ -1,39 +1,41 @@
 /* Header */
 #header {
-    position: sticky;
+    position: fixed; /* Ensure the header stays at the top */
     top: 0;
+    width: 100%; /* Full width */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    z-index: 1000;
+    padding: 10px 20px; /* Adjust padding to fit smaller sizes */
+    z-index: 1000; /* Ensure it's above other elements */
+    background: rgba(0, 0, 0, 0); /* Semi-transparent background for readability */
     transition: background 0.3s, padding 0.3s;
 }
 
+#header.scrolled {
+    background: rgba(0, 0, 0, 0); /* Slightly lighter background on scroll */
+    padding: 5px 20px; /* Reduce padding when scrolled */
+}
+
+/* Logo */
 #logo {
-    height: 200px;
-    transition: height 0.8s ease;
+    height: 200px; /* Default logo size */
+    transition: height 0.3s ease; /* Smooth size transition */
 }
 
-/* Menu Toggle Button */
-#menu-toggle {
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    z-index: 1100;
+#header.scrolled #logo {
+    height: 80px; /* Shrink logo size when scrolled */
 }
 
-/* Menu Styles */
+/* Menu */
 #menu {
-    position: fixed;
+    position: fixed; /* Make menu fixed */
     top: 0;
-    right: -300px;
+    right: -300px; /* Initially hidden */
     height: 100%;
     width: 300px;
-    background: rgba(0, 0, 0, 0.9);
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.507); /* Solid black background */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +45,7 @@
 }
 
 #menu.open {
-    right: 0;
+    right: 0; /* Slide menu into view */
 }
 
 #menu ul {
@@ -66,4 +68,14 @@
 
 #menu ul li a:hover {
     color: #ff5722;
+}
+
+/* Menu Toggle Button */
+#menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
 }

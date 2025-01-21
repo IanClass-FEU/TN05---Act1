@@ -1,4 +1,4 @@
-// JavaScript for shrinking the logo on scroll
+// JavaScript for shrinking the logo and header on scroll
 const header = document.getElementById('header');
 const logo = document.getElementById('logo');
 
@@ -18,4 +18,12 @@ const menu = document.getElementById('menu');
 
 menuToggle.addEventListener('click', () => {
     menu.classList.toggle('open'); // Toggle the "open" class to slide menu in and out
+});
+
+// Close the menu when clicking outside of it
+document.addEventListener('click', (event) => {
+    const isClickInside = menu.contains(event.target) || menuToggle.contains(event.target);
+    if (!isClickInside) {
+        menu.classList.remove('open');
+    }
 });
