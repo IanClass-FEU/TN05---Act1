@@ -30,17 +30,12 @@
 
 /* Menu */
 #menu {
-    position: fixed; /* Make menu fixed */
+    position: absolute; /* Make menu fixed */
     top: 0;
     right: -300px; /* Initially hidden */
     height: 100%;
     width: 300px;
     background: rgba(0, 0, 0, 0.507); /* Solid black background */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     transition: right 0.3s ease;
     z-index: 1100;
 }

@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
         logo.style.height = '80px'; // Shrink logo when scrolled
     } else {
         header.classList.remove('scrolled');
-        logo.style.height = '200px'; // Reset to large size when at the top
+        logo.style.height = '400px'; // Reset to large size when at the top
     }
 });
 
