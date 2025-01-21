@@ -19,7 +19,7 @@
 
 /* Logo */
 #logo {
-    height: 400px; /* Default logo size */
+    height: 450px; /* Default logo size */
     transition: height 0.3s ease; /* Smooth size transition */
     z-index: 1100;
 }
@@ -28,50 +28,129 @@
     height: 80px; /* Shrink logo size when scrolled */
 }
 
+
+/* Menu */
+/* Close Button in Menu */
+#menu-close {
+    font-size: 36px; /* Large close icon */
+    color: white; /* White color for close icon */
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1200; /* Make sure the close button is above other elements */
+    transition: color 0.3s ease;
+}
+
+/* Close button hover effect */
+#menu-close:hover {
+    color: #ff5722; /* Orange color on hover */
+}
+
 /* Menu */
 #menu {
-    position: absolute; /* Make menu fixed */
-    top: 0;
-    right: -300px; /* Initially hidden */
-    height: 100%;
-    width: 300px;
-    background: rgba(0, 0, 0, 0.507); /* Solid black background */
-    transition: right 0.3s ease;
-    z-index: 1100;
+    position: absolute; /* Position it absolutely to the right */
+    top: 0; /* Align it at the top */
+    right: -500px; /* Initially hidden off-screen */
+    height: 100vh; /* Ensure it takes up the full height of the viewport */
+    width: 500px; /* Fixed width for the menu */
+    background: rgb(0, 0, 0); /* Black background with slight transparency */
+    transition: right 0.3s ease; /* Slide-in effect */
+    z-index: 1100; /* Ensure it's above other elements */
+    display: flex;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Center the content horizontally */
 }
 
+/* When menu is open */
 #menu.open {
-    right: 0; /* Slide menu into view */
+    right: 0; /* Slide the menu in from the right */
 }
 
+
+/* Menu Items */
 #menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    justify-content: center; /* Center the items vertically */
+    align-items: center; /* Center the items horizontally */
 }
 
+/* Each menu item (li) */
 #menu ul li {
     margin: 20px 0;
 }
 
+/* Rounded Buttons inside Menu */
 #menu ul li a {
     color: white;
+    border: 2px solid white;
+    border-radius: 0;
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 25px; /* Rounded edges */
+    display: inline-block;
+    width: 400px; /* Makes the buttons take up 80% of the menu's width */
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 #menu ul li a:hover {
-    color: #ff5722;
+    background: #ff5722; /* Highlight on hover */
+    color: white;
 }
 
 /* Menu Toggle Button */
 #menu-toggle {
     font-size: 24px;
     background: none;
-    border: none;
+    border: 2px solid white;
     color: white;
     cursor: pointer;
     z-index: 1100;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
+
+#menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ff5722;
+}
+
+
+/* Sections with Rounded Squares */
+.service-card, .project-card, .team-member {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners for cards */
+    display: inline-block;
+    width: calc(30% - 40px);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for separation */
+    transition: transform 0.3s, background 0.3s;
+}
+
+.service-card:hover, .project-card:hover, .team-member:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .service-card, .project-card, .team-member {
+        width: calc(100% - 40px); /* Stack cards on smaller screens */
+    }
+}
+

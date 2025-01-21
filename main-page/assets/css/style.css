@@ -14,7 +14,7 @@ body {
 
 /* Wrapper for Header and Hero Section */
 .header-hero-wrapper {
-    background-image: url('../img/2.png');
+    background-image: url('../img/Hero.png');
     background-size: cover; /* Cover the entire wrapper */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
