@@ -19,8 +19,9 @@
 
 /* Logo */
 #logo {
-    height: 200px; /* Default logo size */
+    height: 400px; /* Default logo size */
     transition: height 0.3s ease; /* Smooth size transition */
+    z-index: 1100;
 }
 
 #header.scrolled #logo {
@@ -41,7 +42,7 @@
     justify-content: center;
     align-items: center;
     transition: right 0.3s ease;
-    z-index: 1000;
+    z-index: 1100;
 }
 
 #menu.open {

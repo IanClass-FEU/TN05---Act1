@@ -14,15 +14,14 @@ body {
 
 /* Wrapper for Header and Hero Section */
 .header-hero-wrapper {
-    background-image: url('../img/2.png'); /* Path to your background image */
+    background-image: url('../img/2.png');
     background-size: cover; /* Cover the entire wrapper */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     min-height: 100vh; /* Ensure it covers the viewport */
 }
 
-/* Hero Section */
-/* Hero Section */
+
 .hero {
 
     color: white; /* White text */
@@ -33,19 +32,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-/* Hero Image */
-.hero-image {
-    position: absolute; /* Position the image absolutely */
-    right: 20px; /* Position the image 20px from the right */
-    top: 50%; /* Position the image vertically centered */
-    transform: translateY(-50%); /* Adjust image position to truly center it vertically */
-    max-width: 40%; /* Adjust width based on your needs */
-    height: auto;
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for better visibility */
-}
-
 
 
 .cta-button {

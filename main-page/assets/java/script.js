@@ -12,6 +12,8 @@ window.addEventListener('scroll', () => {
     }
 });
 
+
+
 // Menu Toggle Functionality
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
