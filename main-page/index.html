@@ -32,6 +32,37 @@
         </section>
     </div>
 
+    <!-- Menu Button at Bottom Right -->
+<!-- Menu Button -->
+<div class="menu-button">
+    <i class="fas fa-bars"></i> <!-- You can replace this with your desired icon -->
+</div>
+
+<!-- Feedback Modal -->
+<div id="feedback-modal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span> <!-- Close button inside the box -->
+        
+        <h2>Your Feedback</h2>
+        
+        <!-- Feedback Message Box -->
+        <textarea id="feedback-text" placeholder="Share your experience..."></textarea>
+
+        <!-- Star Rating -->
+        <div class="star-rating">
+            <span class="star" data-rate="1">&#9733;</span>
+            <span class="star" data-rate="2">&#9733;</span>
+            <span class="star" data-rate="3">&#9733;</span>
+            <span class="star" data-rate="4">&#9733;</span>
+            <span class="star" data-rate="5">&#9733;</span>
+        </div>
+
+        <!-- Submit Button -->
+        <button id="submit-feedback" class="submit-btn">Submit</button>
+    </div>
+</div>
+
+
 
     <section id="about" class="about">
         <div class="about-content">
@@ -57,7 +88,7 @@
         <div class="service-card">
             <img src="./assets/img/iot.png" alt="Service 3" class="service-image" data-modal-image="./assets/img/iotrecap.png">
         </div>
-    
+        
         <!-- Like Button for Services (moved to the bottom) -->
         <div class="like-button-container">
             <p class="like-message">Was this helpful?</p>
@@ -65,31 +96,14 @@
                 <i class="far fa-heart"></i> <span class="like-count">0</span>
             </button>
         </div>
-    </div>
+        
+        <!-- Modal -->
+        <div id="image-modal" class="modal">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content" id="modal-image" alt="Service Image">
+        </div>
     </section>
-    <div class="services">
-    </section>
-
-    <div class="services">
-    <!-- Modal -->
-    <div id="image-modal" class="modal">
-        <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modal-image">
-    </div>
     
-    
-
-<div id="image-modal" class="modal">
-    <span class="modal-close">&times;</span>
-    <img class="modal-content" id="modal-image">
-</div>
-
-
-
-    <div id="modal" class="modal">
-        <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modal-image" alt="Service Image">
-    </div>
 
     <section id="contact" class="contact">
         <img src="./assets/img/contactus.png" alt="Contact Us Background" class="contact-background">

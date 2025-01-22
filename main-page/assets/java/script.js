@@ -83,5 +83,60 @@ document.querySelectorAll('.like-button').forEach(button => {
     });
 });
 
+// Open Feedback Modal when the menu button is clicked
+document.querySelector('.menu-button').addEventListener('click', () => {
+    const modal = document.getElementById('feedback-modal');
+    modal.style.display = 'flex'; // Show modal using flexbox
+});
+
+// Close Feedback Modal when the close button is clicked
+document.querySelector('.modal-close').addEventListener('click', () => {
+    const modal = document.getElementById('feedback-modal');
+    modal.style.display = 'none'; // Hide modal
+});
+
+// Handle Star Rating Selection
+let rating = 0;
+document.querySelectorAll('.star').forEach(star => {
+    star.addEventListener('click', () => {
+        rating = star.getAttribute('data-rate');
+        
+        // Highlight the stars based on the rating
+        document.querySelectorAll('.star').forEach(starElement => {
+            if (starElement.getAttribute('data-rate') <= rating) {
+                starElement.style.color = 'gold';
+            } else {
+                starElement.style.color = '#ccc';
+            }
+        });
+    });
+});
+
+// Submit the feedback
+document.getElementById('submit-feedback').addEventListener('click', () => {
+    const feedbackText = document.getElementById('feedback-text').value;
+    
+    if (rating > 0) {
+        alert(`Thank you for your feedback! You rated us ${rating} stars.\nYour feedback: ${feedbackText}`);
+        
+        // Close modal after submission
+        const modal = document.getElementById('feedback-modal');
+        modal.style.display = 'none';
+        
+        // Optionally, reset the feedback form
+        document.getElementById('feedback-text').value = '';
+        document.querySelectorAll('.star').forEach(starElement => {
+            starElement.style.color = '#ccc';
+        });
+        rating = 0; // Reset rating
+    } else {
+        alert('Please provide a rating before submitting.');
+    }
+});
+
+
+
+
+
 
 
