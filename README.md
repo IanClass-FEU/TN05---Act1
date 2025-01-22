@@ -10,8 +10,8 @@
     <img src="./assets/img/readme.png" alt="hero">
   </a>
 
-<h2 align ="center"> NaiOyamat</h2>
-  <h3 align="center"> FINALS </h3>
+<h2 align ="center"> Techverse Innovation</h2>
+  <h3 align="center"> Activity 1 </h3>
   <p> The objective of this website was to create a single-page website that introduces Techverse Innovation, showcases its offerings, and provides a way for potential clients to contact the company. </p>
 </div>
 <div align="center">
@@ -43,9 +43,6 @@
           <a href="#technology">Technology</a>
         </li>
       </ol>
-    </li>
-    <li>
-      <a href="#rule,-practices-and-principles">Rules, Practices and Principles</a>
     </li>
     <li>
       <a href="#resources">Resources</a>
