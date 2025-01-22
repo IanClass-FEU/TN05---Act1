@@ -37,8 +37,8 @@ body {
     justify-content: flex-end;
     height: 100%;
     position: absolute;
-    bottom: 20px;
-    left: 1255px;
+    bottom: 10px;
+    left: 1250px;
 }
 
 .cta-button {
