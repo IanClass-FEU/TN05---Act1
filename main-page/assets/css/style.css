@@ -12,16 +12,6 @@ body {
     color: white; /* White text */
 }
 
-/* Wrapper for Header and Hero Section */
-.header-hero-wrapper {
-    position: relative; /* Set as the reference for absolute positioning */
-    background-image: url('../img/Hero.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-}
-
 .hero {
     color: white; /* White text */
     text-align: left; /* Align text to the left */
