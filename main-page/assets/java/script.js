@@ -117,11 +117,11 @@ window.addEventListener('click', (event) => {
 let rating = 0;
 document.querySelectorAll('.star').forEach(star => {
     star.addEventListener('click', () => {
-        rating = star.getAttribute('data-rate');
+        rating = star.getAttribute('data-value'); // Correct attribute used here
         
         // Highlight the stars based on the rating
         document.querySelectorAll('.star').forEach(starElement => {
-            if (starElement.getAttribute('data-rate') <= rating) {
+            if (starElement.getAttribute('data-value') <= rating) {  // Match with data-value
                 starElement.style.color = 'gold';
             } else {
                 starElement.style.color = '#ccc';
@@ -131,8 +131,8 @@ document.querySelectorAll('.star').forEach(star => {
 });
 
 // Submit the feedback
-document.getElementById('submit-feedback').addEventListener('click', () => {
-    const feedbackText = document.getElementById('feedback-text').value;
+document.querySelector('.submit-btn').addEventListener('click', () => { // Use correct class for the button
+    const feedbackText = document.querySelector('textarea').value;
     
     if (rating > 0) {
         alert(`Thank you for your feedback! You rated us ${rating} stars.\nYour feedback: ${feedbackText}`);
@@ -142,7 +142,7 @@ document.getElementById('submit-feedback').addEventListener('click', () => {
         modal.style.display = 'none';
         
         // Optionally, reset the feedback form
-        document.getElementById('feedback-text').value = '';
+        document.querySelector('textarea').value = '';
         document.querySelectorAll('.star').forEach(starElement => {
             starElement.style.color = '#ccc';
         });
@@ -151,6 +151,7 @@ document.getElementById('submit-feedback').addEventListener('click', () => {
         alert('Please provide a rating before submitting.');
     }
 });
+
 
 
 
