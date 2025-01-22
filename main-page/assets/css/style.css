@@ -14,24 +14,32 @@ body {
 
 /* Wrapper for Header and Hero Section */
 .header-hero-wrapper {
+    position: relative; /* Set as the reference for absolute positioning */
     background-image: url('../img/Hero.png');
-    background-size: cover; /* Cover the entire wrapper */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    min-height: 100vh; /* Ensure it covers the viewport */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
+
 
 
 .hero {
-
     color: white; /* White text */
-    text-align: center;
-    padding: 100px 20px;
+    text-align: left; /* Align text to the left */
+    padding: 20px; /* Add some padding for spacing */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-end; /* Align items to the bottom */
+    height: 100%; /* Take up the full height of the hero wrapper */
+    position: absolute; /* Allow precise positioning within its parent */
+    bottom: 20px; /* Adjust distance from the bottom (manual adjustment) */
+    left:1255px; /* Adjust distance from the left (manual adjustment) */
 }
+
+
+
 
 
 .cta-button {
@@ -44,7 +52,7 @@ body {
 }
 
 .cta-button:hover {
-    background: black; /* Invert colors on hover */
+    background: rgb(172, 31, 31); /* Invert colors on hover */
     color: white;
     border: 1px solid white;
 }
