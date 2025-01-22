@@ -90,13 +90,11 @@
 /* Rounded Buttons inside Menu */
 #menu ul li a {
     color: white;
-    border: 2px solid white;
-    border-radius: 0;
+    border: solid white;
     text-decoration: none;
     font-size: 18px;
     padding: 15px;
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    border-radius: 25px; /* Rounded edges */
     display: inline-block;
     width: 400px; /* Makes the buttons take up 80% of the menu's width */
     transition: background 0.3s ease, color 0.3s ease;
@@ -128,29 +126,4 @@
     border-color: #ff5722;
 }
 
-
-/* Sections with Rounded Squares */
-.service-card, .project-card, .team-member {
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    color: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 15px; /* Rounded corners for cards */
-    display: inline-block;
-    width: calc(30% - 40px);
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for separation */
-    transition: transform 0.3s, background 0.3s;
-}
-
-.service-card:hover, .project-card:hover, .team-member:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-5px); /* Slight lift on hover */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .service-card, .project-card, .team-member {
-        width: calc(100% - 40px); /* Stack cards on smaller screens */
-    }
-}
 

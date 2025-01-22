@@ -22,8 +22,6 @@ body {
     min-height: 100vh;
 }
 
-
-
 .hero {
     color: white; /* White text */
     text-align: left; /* Align text to the left */
@@ -37,10 +35,6 @@ body {
     bottom: 20px; /* Adjust distance from the bottom (manual adjustment) */
     left:1255px; /* Adjust distance from the left (manual adjustment) */
 }
-
-
-
-
 
 .cta-button {
     background: white; /* White background for button */
@@ -58,29 +52,73 @@ body {
 }
 
 /* Sections */
-.about, .services, .portfolio, .team, .contact {
+.about, .services, .contact {
     padding: 50px 20px;
     text-align: center;
     color: white; /* White text in all sections */
 }
 
-/* Cards (Services, Projects, Team Members) */
-.service-card, .project-card, .team-member {
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    color: white; /* White text inside cards */
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    display: inline-block;
-    width: calc(30% - 40px);
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for separation */
-    transition: transform 0.3s, background 0.3s;
+/* About Section */
+.about-content {
+    text-align: center;
 }
 
-.service-card:hover, .project-card:hover, .team-member:hover {
-    background: rgba(255, 255, 255, 0.2); /* Brighter hover effect */
-    transform: translateY(-5px); /* Slight lift on hover */
+.about-image {
+    width: 100%;
+    height: auto;
 }
+
+/* Services Section */
+.services {
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+}
+
+.services-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    color: white;
+    margin: 20px;
+    padding: 0; /* Remove any internal padding */
+    display: inline-block;
+    width: calc(30% - 40px);
+    border: 2px solid white; /* Thin white border */
+    transition: transform 0.3s, background 0.3s;
+    text-align: center;
+    border-radius: 0; /* Sharp corners */
+    position: relative;
+}
+
+
+.service-card img {
+    max-width: 100%; /* Image will fill its container */
+    height: auto; /* Maintain aspect ratio of the image */
+    object-fit: contain; /* Ensure the image fits within the container */
+    display: block; /* Make image block-level to remove extra spacing */
+    margin: 0px; /* Center the image and add space below it */
+}
+
+/* Hover effect */
+.service-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Ensure cards stack on smaller screens */
+@media (max-width: 768px) {
+    .service-card {
+        width: calc(100% - 40px);
+    }
+}
+
+
+
 
 /* Contact Form */
 .contact form {
@@ -91,9 +129,9 @@ body {
 }
 
 .contact input, .contact textarea, .contact button {
-    background: black; /* Black background for inputs */
-    color: white; /* White text */
-    border: 1px solid white; /* White border */
+    background: black;
+    color: white;
+    border: 1px solid white;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
@@ -102,17 +140,17 @@ body {
 }
 
 .contact input:focus, .contact textarea:focus {
-    background: rgba(255, 255, 255, 0.1); /* Highlight on focus */
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .contact button {
-    background: white; /* White button */
-    color: black; /* Black text */
+    background: white;
+    color: black;
     cursor: pointer;
 }
 
 .contact button:hover {
-    background: black; /* Invert on hover */
+    background: black;
     color: white;
 }
 
@@ -120,13 +158,13 @@ body {
 footer {
     text-align: center;
     padding: 20px;
-    color: white; /* White footer text */
-    background: rgba(255, 255, 255, 0.1); /* Subtle background for footer */
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .service-card, .project-card, .team-member {
-        width: calc(100% - 40px); /* Stack cards on smaller screens */
+        width: calc(100% - 40px);
     }
 }
