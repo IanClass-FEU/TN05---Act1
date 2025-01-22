@@ -147,7 +147,7 @@ body {
 
 
 .service-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(0, 0, 0);
     color: white;
     margin: 20px;
     padding: 0;
@@ -390,6 +390,7 @@ body {
 
 .modal-feedback {
     display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -399,6 +400,7 @@ body {
     align-items: center;
     z-index: 1000;
 }
+
 
 
 .modal-content-feedback {
@@ -411,6 +413,29 @@ body {
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.modal-open-feedback {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff00;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-open-feedback:hover {
+    background-color: rgba(255, 217, 0, 0); /* Changes to gold when hovered */
+    color: gold;           /* Optional: Changes text/icon color to black */
+    transform: scale(1.1);  /* Slightly enlarges the button on hover */
+}
+
 
 
 .modal-close-feedback {
@@ -434,7 +459,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.904);
+    background: rgba(0, 0, 0, 0.938);
     justify-content: center;
     align-items: center;
     z-index: 1001;

@@ -83,17 +83,34 @@ document.querySelectorAll('.like-button').forEach(button => {
     });
 });
 
-// Open Feedback Modal when the menu button is clicked
 document.querySelector('.modal-open-feedback').addEventListener('click', () => {
     const modal = document.getElementById('feedback-modal');
-    modal.style.display = 'flex'; // Show modal using flexbox
+    if (modal) {
+        modal.style.display = 'flex'; // Show the modal using flexbox
+    } else {
+        console.error('Feedback modal not found');
+    }
 });
 
-// Close Feedback Modal when the close button is clicked
+
+// Close Feedback Modal
 document.querySelector('.modal-close-feedback').addEventListener('click', () => {
     const modal = document.getElementById('feedback-modal');
-    modal.style.display = 'none'; // Hide modal
+    if (modal) {
+        modal.style.display = 'none'; // Hide the modal
+    } else {
+        console.error('Feedback modal not found');
+    }
 });
+
+// Optional: Close modal when clicking outside the modal content
+window.addEventListener('click', (event) => {
+    const modal = document.getElementById('feedback-modal');
+    if (event.target === modal) {
+        modal.style.display = 'none'; // Hide the modal
+    }
+});
+
 
 
 // Handle Star Rating Selection
