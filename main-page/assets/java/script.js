@@ -61,5 +61,27 @@ modal.addEventListener('click', (e) => {
     }
 });
 
+document.querySelectorAll('.like-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const icon = button.querySelector('i');
+        const countSpan = button.querySelector('.like-count');
+        let count = parseInt(countSpan.textContent, 10);
+
+        if (icon.classList.contains('far')) {
+            // Change to "liked" state
+            icon.classList.remove('far');
+            icon.classList.add('fas');
+            button.classList.add('liked');
+            countSpan.textContent = count + 1; // Increment count
+        } else {
+            // Revert to "unliked" state
+            icon.classList.remove('fas');
+            icon.classList.add('far');
+            button.classList.remove('liked');
+            countSpan.textContent = count - 1; // Decrement count
+        }
+    });
+});
+
 
 

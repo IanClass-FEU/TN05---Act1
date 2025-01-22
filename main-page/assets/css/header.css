@@ -30,7 +30,7 @@
 
 #menu-close {
     font-size: 36px; /* Large close icon */
-    color: white; /* White color for close icon */
+    color: rgb(255, 255, 255); /* Default color (black) for the close icon */
     background: none;
     border: none;
     position: absolute;
@@ -46,20 +46,11 @@
     color: #ff5722; /* Orange color on hover */
 }
 
-/* Menu */
-#menu {
-    position: absolute; /* Position it absolutely to the right */
-    top: 0; /* Align it at the top */
-    right: -500px; /* Initially hidden off-screen */
-    height: 100vh; /* Ensure it takes up the full height of the viewport */
-    width: 500px; /* Fixed width for the menu */
-    background: rgb(0, 0, 0); /* Black background with slight transparency */
-    transition: right 0.3s ease; /* Slide-in effect */
-    z-index: 1100; /* Ensure it's above other elements */
-    display: flex;
-    justify-content: center; /* Vertically center the content */
-    align-items: center; /* Center the content horizontally */
+/* Close button active effect */
+#menu-close:active {
+    color: #e64a19; /* Slightly darker shade when clicked */
 }
+
 
 /* When menu is open */
 #menu.open {
@@ -113,8 +104,8 @@
 /* Menu Toggle Button */
 #menu-toggle {
     font-size: 24px;
-    background: none;
-    border: solid white;
+    background: rgba(0, 0, 0, 0.164); /* Set background color to black */
+    border: solid rgba(0, 0, 0, 0.160);
     color: white;
     cursor: pointer;
     z-index: 1100;
@@ -126,8 +117,8 @@
 }
 
 #menu-toggle:hover {
-    background: rgba(0, 0, 0, 0.801);
-    border-color: #ff5722;
+    background: #000000; /* Highlight background color on hover */
+    border-color: #ff5722; /* Change border color on hover */
 }
 
 

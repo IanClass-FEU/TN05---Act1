@@ -20,7 +20,7 @@
                 <button id="menu-close" aria-label="Close menu">×</button>
                 <ul>
                     <li><a href="#about"> 01/ ABOUT US</a></li>
-                    <li><a href="#projects">02/ OUR SERVICES</a></li>
+                    <li><a href="#services">02/ OUR SERVICES</a></li>
                     <li><a href="#contact">03/ CONTACTS</a></li>
                 </ul>
             </nav>
@@ -36,25 +36,48 @@
     <section id="about" class="about">
         <div class="about-content">
             <img src="./assets/img/aboutus.png" alt="About Us" class="about-image">
+            
+            <!-- Like Text Removed from About Us -->
         </div>
     </section>
+    
+    <section id="services" class="services">
+        <div class="services-content">
+            <img src="./assets/img/services.png" alt="Our Services" class="services-image">
+        </div>
+        
+        <div class="service-card">
+            <img src="./assets/img/ai.png" alt="Service 1" class="service-image" data-modal-image="./assets/img/airecap.png">
+        </div>
+        
+        <div class="service-card">
+            <img src="./assets/img/blockchain.png" alt="Service 2" class="service-image" data-modal-image="./assets/img/bcrecap.png">
+        </div>
+        
+        <div class="service-card">
+            <img src="./assets/img/iot.png" alt="Service 3" class="service-image" data-modal-image="./assets/img/iotrecap.png">
+        </div>
+    
+        <!-- Like Button for Services (moved to the bottom) -->
+        <div class="like-button-container">
+            <p class="like-message">Was this helpful?</p>
+            <button class="like-button" aria-label="Like">
+                <i class="far fa-heart"></i> <span class="like-count">0</span>
+            </button>
+        </div>
+    </div>
+    </section>
+    <div class="services">
+    </section>
 
-
-<div class="services">
-    <div class="services-content">
-        <img src="./assets/img/services.png" alt="Our Services" class="services-image">
+    <div class="services">
+    <!-- Modal -->
+    <div id="image-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-image">
     </div>
-    <div class="service-card">
-        <img src="./assets/img/ai.png" alt="Service 1" class="service-image" data-modal-image="./assets/img/airecap.png">
-    </div>
-    <div class="service-card">
-        <img src="./assets/img/blockchain.png" alt="Service 2" class="service-image" data-modal-image="./assets/img/bcrecap.png">
-    </div>
-    <div class="service-card">
-        <img src="./assets/img/iot.png" alt="Service 1" class="service-image" data-modal-image="./assets/img/iotrecap.png">
-    </div>
-</div>
-
+    
+    
 
 <div id="image-modal" class="modal">
     <span class="modal-close">&times;</span>
