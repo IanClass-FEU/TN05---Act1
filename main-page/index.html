@@ -3,81 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <title>TechVerse Innovation</title>
 </head>
 <body>
-    <!-- Wrapper for header and hero to apply background -->
+
     <div class="header-hero-wrapper">
-     <!-- Header with logo and menu toggle button -->
-    <header id="header">
-        <img id="logo" src="./assets/img/logo.png" alt="TechVerse">
-        <button id="menu-toggle" aria-label="Toggle menu">☰ MENU</button>
-        <nav id="menu">
-            <button id="menu-close" aria-label="Close menu">× CLOSE</button> <!-- Close Button -->
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <a href="#about" class="cta-button">Learn More</a>
-    </section>
-</div>
+        <header id="header">
+            <img id="logo" src="./assets/img/logo.png" alt="TechVerse">
+            <button id="menu-toggle" aria-label="Toggle menu">☰ MENU</button>
+            <nav id="menu">
+                <button id="menu-close" aria-label="Close menu">× CLOSE</button>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-<!-- About Section -->
-<section id="about" class="about">
-    <div class="about-content">
-        <img src="./assets/img/aboutus.png" alt="About Us" class="about-image">
+
+        <section class="hero">
+            <a href="#about" class="cta-button">Learn More</a>
+        </section>
     </div>
-</section>
 
-<!-- Services Section -->
-<section class="services">
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <img src="./assets/img/aboutus.png" alt="About Us" class="about-image">
+        </div>
+    </section>
+
+
+<div class="services">
     <div class="services-content">
         <img src="./assets/img/services.png" alt="Our Services" class="services-image">
     </div>
     <div class="service-card">
-        <img src="./assets/img/ai.png" alt="Web Design" class="service-card-image">
+        <img src="./assets/img/ai.png" alt="Service 1" class="service-image" data-modal-image="./assets/img/airecap.png">
     </div>
     <div class="service-card">
-        <img src="./assets/img/blockchain.png" alt="Mobile Design" class="service-card-image">
+        <img src="./assets/img/blockchain.png" alt="Service 2" class="service-image" data-modal-image="./assets/img/bcrecap.png">
     </div>
     <div class="service-card">
-        <img src="./assets/img/iot.png" alt="Branding" class="service-card-image">
+        <img src="./assets/img/iot.png" alt="Service 1" class="service-image" data-modal-image="./assets/img/iotrecap.png">
     </div>
-</section>
+</div>
+
+
+<div id="image-modal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>
 
 
 
-
-
-<!-- Contact Section -->
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form>
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-    <div class="contact-info">
-        <p>Email: </p>
-        <p>Phone: +123 456 7890</p>
+    <div id="modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-image" alt="Service Image">
     </div>
-</section>
 
-<!-- Footer -->
-<footer>
-</footer>
+    <section id="contact" class="contact">
+        <img src="./assets/img/contactus.png" alt="Contact Us Background" class="contact-background">
+        <h2>GET IN TOUCH</h2>
+        
+        <div class="social-icons">
+            <span>Our Socials</span>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+    
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p>Innovating Today, Shaping Tomorrow</p>
+            <p>© 2025 TechVerse Innovations.</p>
+        </div>
+    </section>
+    
 
-<!-- JavaScript -->
-<script src="./assets/java/script.js"></script>
+
+
+    <script src="./assets/java/script.js"></script>
 </body>
 </html>

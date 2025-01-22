@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,13 +8,13 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: black; /* Default background color */
-    color: white; /* White text */
+    background-color: black;
+    color: white;
 }
 
-/* Wrapper for Header and Hero Section */
+
 .header-hero-wrapper {
-    position: relative; /* Set as the reference for absolute positioning */
+    position: relative;
     background-image: url('../img/heroback.png');
     background-size: cover;
     background-position: center;
@@ -22,23 +22,24 @@ body {
     min-height: 100vh;
 }
 
+
 .hero {
-    color: white; /* White text */
-    text-align: left; /* Align text to the left */
-    padding: 20px; /* Add some padding for spacing */
+    color: white;
+    text-align: left;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
-    justify-content: flex-end; /* Align items to the bottom */
-    height: 100%; /* Take up the full height of the hero wrapper */
-    position: absolute; /* Allow precise positioning within its parent */
-    bottom: 20px; /* Adjust distance from the bottom (manual adjustment) */
-    left:1255px; /* Adjust distance from the left (manual adjustment) */
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 1255px;
 }
 
 .cta-button {
-    background: white; /* White background for button */
-    color: black; /* Black text for contrast */
+    background: white;
+    color: black;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -46,19 +47,70 @@ body {
 }
 
 .cta-button:hover {
-    background: rgb(172, 31, 31); /* Invert colors on hover */
+    background: rgb(172, 31, 31);
     color: white;
     border: 1px solid white;
 }
 
-/* Sections */
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+#header.scrolled {
+    padding: 5px 10px;
+}
+
+#logo {
+    height: 400px;
+    transition: height 0.3s;
+}
+
+#menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    z-index: 1000;
+}
+
+#menu.open {
+    display: flex;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu li {
+    margin: 10px 0;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+}
+
+
 .about, .services, .contact {
     padding: 50px 20px;
     text-align: center;
-    color: white; /* White text in all sections */
+    color: white;
 }
 
-/* About Section */
+
 .about-content {
     text-align: center;
 }
@@ -68,57 +120,53 @@ body {
     height: auto;
 }
 
-/* Services Section */
+
 .services {
     text-align: center;
     color: white;
     padding: 50px 20px;
 }
 
-.services-image {
+.services-content {
+    text-align: center;
+    padding: 20px;
     width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensure image covers the area */
 }
+
+.services-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
 
 .service-card {
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    background: rgba(255, 255, 255, 0.1);
     color: white;
     margin: 20px;
-    padding: 0; /* Remove any internal padding */
+    padding: 0;
     display: inline-block;
     width: calc(30% - 40px);
-    border: 2px solid white; /* Thin white border */
+    border: 2px solid white;
     transition: transform 0.3s, background 0.3s;
     text-align: center;
-    border-radius: 0; /* Sharp corners */
-    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
 }
-
 
 .service-card img {
-    max-width: 100%; /* Image will fill its container */
-    height: auto; /* Maintain aspect ratio of the image */
-    object-fit: contain; /* Ensure the image fits within the container */
-    display: block; /* Make image block-level to remove extra spacing */
-    margin: 0px; /* Center the image and add space below it */
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
 
-/* Hover effect */
 .service-card:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-5px);
 }
-
-/* Ensure cards stack on smaller screens */
-@media (max-width: 768px) {
-    .service-card {
-        width: calc(100% - 40px);
-    }
-}
-
-
-
 
 /* Contact Form */
 .contact form {
@@ -154,17 +202,128 @@ body {
     color: white;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.904);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
     color: white;
+    cursor: pointer;
+}
+
+.contact {
+    position: relative;
+    padding: 50px 20px;
+    color: white;
+}
+
+.contact-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.contact h2, .contact form, .contact-info {
+    position: relative;
+    z-index: 1;
+    top: 490px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    top: 500px;
+}
+
+.contact input, .contact textarea, .contact button {
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contact input:focus, .contact textarea:focus {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Adjustments */
+.contact button {
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: black;
+    color: white;
+}
+
+
+.contact .social-icons {
+    position: absolute;
+    bottom: -350px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    z-index: 2;
+}
+
+.contact .social-icons span {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.contact .social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.contact .social-icons a:hover {
+    transform: scale(1.2);
+    color: rgb(172, 31, 31);
+}
+
 @media (max-width: 768px) {
-    .service-card, .project-card, .team-member {
+    .service-card {
         width: calc(100% - 40px);
+    }
+
+    .hero {
+        left: 20px;
+        bottom: 20px;
     }
 }
