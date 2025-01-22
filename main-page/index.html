@@ -32,23 +32,25 @@
         </section>
     </div>
 
-    <!-- Menu Button at Bottom Right -->
-<!-- Menu Button -->
+
+
 <div class="menu-button">
-    <i class="fas fa-bars"></i> <!-- You can replace this with your desired icon -->
+    <i class="fas fa-star"></i>
 </div>
 
-<!-- Feedback Modal -->
-<div id="feedback-modal" class="modal">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span> <!-- Close button inside the box -->
-        
+
+
+<div id="feedback-modal" class="modal-feedback">
+    <div class="modal-content-feedback">
+        <span class="modal-close-feedback">&times;</span>
+
+
         <h2>Your Feedback</h2>
-        
-        <!-- Feedback Message Box -->
+
+
         <textarea id="feedback-text" placeholder="Share your experience..."></textarea>
 
-        <!-- Star Rating -->
+
         <div class="star-rating">
             <span class="star" data-rate="1">&#9733;</span>
             <span class="star" data-rate="2">&#9733;</span>
@@ -57,58 +59,63 @@
             <span class="star" data-rate="5">&#9733;</span>
         </div>
 
-        <!-- Submit Button -->
+
         <button id="submit-feedback" class="submit-btn">Submit</button>
     </div>
 </div>
+
+
+<div id="image-modal" class="modal-image">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>
+
 
 
 
     <section id="about" class="about">
         <div class="about-content">
             <img src="./assets/img/aboutus.png" alt="About Us" class="about-image">
-            
-            <!-- Like Text Removed from About Us -->
         </div>
     </section>
-    
+
     <section id="services" class="services">
+    <div class="services">
         <div class="services-content">
             <img src="./assets/img/services.png" alt="Our Services" class="services-image">
         </div>
-        
+
         <div class="service-card">
             <img src="./assets/img/ai.png" alt="Service 1" class="service-image" data-modal-image="./assets/img/airecap.png">
         </div>
-        
+
         <div class="service-card">
             <img src="./assets/img/blockchain.png" alt="Service 2" class="service-image" data-modal-image="./assets/img/bcrecap.png">
         </div>
-        
+
         <div class="service-card">
             <img src="./assets/img/iot.png" alt="Service 3" class="service-image" data-modal-image="./assets/img/iotrecap.png">
         </div>
-        
-        <!-- Like Button for Services (moved to the bottom) -->
+
         <div class="like-button-container">
-            <p class="like-message">Was this helpful?</p>
+            <p class="like-message">Was this section helpful?</p>
             <button class="like-button" aria-label="Like">
                 <i class="far fa-heart"></i> <span class="like-count">0</span>
             </button>
         </div>
-        
-        <!-- Modal -->
-        <div id="image-modal" class="modal">
+    </div>
+</section>
+
+        <div id="modal" class="modal">
             <span class="modal-close">&times;</span>
             <img class="modal-content" id="modal-image" alt="Service Image">
         </div>
-    </section>
-    
+
 
     <section id="contact" class="contact">
         <img src="./assets/img/contactus.png" alt="Contact Us Background" class="contact-background">
         <h2>GET IN TOUCH</h2>
-        
+
         <div class="social-icons">
             <span>Our Socials</span>
             <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -116,8 +123,7 @@
             <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
-        
-    
+
         <form>
             <input type="text" placeholder="Name" required>
             <input type="email" placeholder="Email" required>
@@ -129,7 +135,7 @@
             <p>© 2025 TechVerse Innovations.</p>
         </div>
     </section>
-    
+
 
 
 

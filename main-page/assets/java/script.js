@@ -84,16 +84,17 @@ document.querySelectorAll('.like-button').forEach(button => {
 });
 
 // Open Feedback Modal when the menu button is clicked
-document.querySelector('.menu-button').addEventListener('click', () => {
+document.querySelector('.modal-open-feedback').addEventListener('click', () => {
     const modal = document.getElementById('feedback-modal');
     modal.style.display = 'flex'; // Show modal using flexbox
 });
 
 // Close Feedback Modal when the close button is clicked
-document.querySelector('.modal-close').addEventListener('click', () => {
+document.querySelector('.modal-close-feedback').addEventListener('click', () => {
     const modal = document.getElementById('feedback-modal');
     modal.style.display = 'none'; // Hide modal
 });
+
 
 // Handle Star Rating Selection
 let rating = 0;
