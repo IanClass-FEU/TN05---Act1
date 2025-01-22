@@ -28,9 +28,6 @@
     height: 80px; /* Shrink logo size when scrolled */
 }
 
-
-/* Menu */
-/* Close Button in Menu */
 #menu-close {
     font-size: 36px; /* Large close icon */
     color: white; /* White color for close icon */
@@ -71,16 +68,24 @@
 
 
 /* Menu Items */
-#menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+#menu {
+    position: absolute; /* Position it absolutely to the right */
+    top: 0; /* Align it at the top */
+    right: -500px; /* Initially hidden off-screen */
+    height: 100vh; /* Ensure it takes up the full height of the viewport */
+    width: 500px; /* Fixed width for the menu */
+    background: black; /* Fallback background color */
+    background-image: url('../img/menuback.png'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire menu */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    transition: right 0.3s ease; /* Slide-in effect */
+    z-index: 1100; /* Ensure it's above other elements */
     display: flex;
-    flex-direction: column; /* Stack the items vertically */
-    justify-content: center; /* Center the items vertically */
-    align-items: center; /* Center the items horizontally */
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Center the content horizontally */
 }
+
 
 /* Each menu item (li) */
 #menu ul li {
@@ -94,7 +99,7 @@
     text-decoration: none;
     font-size: 18px;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
     display: inline-block;
     width: 400px; /* Makes the buttons take up 80% of the menu's width */
     transition: background 0.3s ease, color 0.3s ease;
@@ -109,7 +114,7 @@
 #menu-toggle {
     font-size: 24px;
     background: none;
-    border: 2px solid white;
+    border: solid white;
     color: white;
     cursor: pointer;
     z-index: 1100;
@@ -117,12 +122,11 @@
     top: 10px;
     right: 20px;
     padding: 10px 15px;
-    border-radius: 10px;
     transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 #menu-toggle:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.801);
     border-color: #ff5722;
 }
 
