@@ -15,7 +15,7 @@ body {
 /* Wrapper for Header and Hero Section */
 .header-hero-wrapper {
     position: relative; /* Set as the reference for absolute positioning */
-    background-image: url('../img/logo.png');
+    background-image: url('../img/heroback.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
