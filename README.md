@@ -10,8 +10,13 @@
     <img src="./assets/img/readme.png" alt="hero">
   </a>
 
-<h2 align ="center"> Techverse Innovation</h2>
+<h2 align ="center"> Citadel Network</h2>
   <h3 align="center"> Activity 1 </h3>
+  <h3 align="center"> Members </h3>
+  <li align="center"> Project Lead - Tamayo, Ian Rey Angelo S.</li>
+  <li align="center"> Co-Lead - Andrade, Kyla Mae E. </li>
+  <li align="center"> Designer - Franco Jr. Eduardo S.</li>
+  <li align="center"> Programmer - Velarde, Jairus Migual O. </li>
   <p> The objective of this website was to create a single-page website that introduces Techverse Innovation, showcases its offerings, and provides a way for potential clients to contact the company. </p>
 </div>
 <div align="center">
