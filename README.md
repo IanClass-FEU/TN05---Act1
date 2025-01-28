@@ -16,7 +16,7 @@
   <li align="center"> Project Lead - Tamayo, Ian Rey Angelo S.</li>
   <li align="center"> Co-Lead - Andrade, Kyla Mae E. </li>
   <li align="center"> Designer - Franco Jr. Eduardo S.</li>
-  <li align="center"> Programmer - Velarde, Jairus Migual O. </li>
+  <li align="center"> Co-designer - Velarde, Jairus Migual O. </li>
 </div>
 <div align="center">
 </div>
