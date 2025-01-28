@@ -1,110 +1,108 @@
-/* Header */
+
 #header {
-    position: fixed; /* Ensure the header stays at the top */
+    position: fixed;
     top: 0;
-    width: 100%; /* Full width */
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Adjust padding to fit smaller sizes */
-    z-index: 1000; /* Ensure it's above other elements */
-    background: rgba(0, 0, 0, 0); /* Semi-transparent background for readability */
+    padding: 10px 20px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0);
     transition: background 0.3s, padding 0.3s;
 }
 
 #header.scrolled {
-    background: rgba(0, 0, 0, 0); /* Slightly lighter background on scroll */
-    padding: 5px 20px; /* Reduce padding when scrolled */
+    background: rgba(0, 0, 0, 0);
+    padding: 5px 20px;
 }
 
 /* Logo */
 #logo {
-    height: 450px; /* Default logo size */
-    transition: height 0.3s ease; /* Smooth size transition */
+    height: 450px;
+    transition: height 0.3s ease;
     z-index: 1100;
 }
 
 #header.scrolled #logo {
-    height: 80px; /* Shrink logo size when scrolled */
+    height: 80px;
 }
 
 #menu-close {
-    font-size: 36px; /* Large close icon */
-    color: rgb(255, 255, 255); /* Default color (black) for the close icon */
+    font-size: 36px;
+    color: rgb(255, 255, 255);
     background: none;
     border: none;
     position: absolute;
     top: 20px;
     right: 20px;
     cursor: pointer;
-    z-index: 1200; /* Make sure the close button is above other elements */
+    z-index: 1200;
     transition: color 0.3s ease;
 }
 
-/* Close button hover effect */
+
 #menu-close:hover {
-    color: #ff5722; /* Orange color on hover */
+    color: #ff5722;
 }
 
-/* Close button active effect */
+
 #menu-close:active {
-    color: #e64a19; /* Slightly darker shade when clicked */
+    color: #e64a19;
 }
 
 
-/* When menu is open */
+
 #menu.open {
-    right: 0; /* Slide the menu in from the right */
+    right: 0;
 }
 
 
 /* Menu Items */
 #menu {
-    position: absolute; /* Position it absolutely to the right */
-    top: 0; /* Align it at the top */
-    right: -500px; /* Initially hidden off-screen */
-    height: 100vh; /* Ensure it takes up the full height of the viewport */
-    width: 500px; /* Fixed width for the menu */
-    background: black; /* Fallback background color */
-    background-image: url('../img/menuback.png'); /* Path to your image */
-    background-size: cover; /* Ensures the image covers the entire menu */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
-    transition: right 0.3s ease; /* Slide-in effect */
-    z-index: 1100; /* Ensure it's above other elements */
+    position: absolute;
+    top: 0;
+    right: -500px;
+    height: 100vh;
+    width: 500px;
+    background: black;
+    background-image: url('../img/menuback.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: right 0.3s ease;
+    z-index: 1100;
     display: flex;
-    justify-content: center; /* Vertically center the content */
-    align-items: center; /* Center the content horizontally */
+    justify-content: center;
+    align-items: center;
 }
 
 
-/* Each menu item (li) */
 #menu ul li {
     margin: 20px 0;
 }
 
-/* Rounded Buttons inside Menu */
+
 #menu ul li a {
     color: white;
     border: solid white;
     text-decoration: none;
     font-size: 18px;
     padding: 15px;
-    background: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.1);
     display: inline-block;
-    width: 400px; /* Makes the buttons take up 80% of the menu's width */
+    width: 400px;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
 #menu ul li a:hover {
-    background: #ff5722; /* Highlight on hover */
+    background: #ff5722;
     color: white;
 }
 
-/* Menu Toggle Button */
 #menu-toggle {
     font-size: 24px;
-    background: rgba(0, 0, 0, 0.164); /* Set background color to black */
+    background: rgba(0, 0, 0, 0.164);
     border: solid rgba(0, 0, 0, 0.160);
     color: white;
     cursor: pointer;
@@ -117,8 +115,8 @@
 }
 
 #menu-toggle:hover {
-    background: #000000; /* Highlight background color on hover */
-    border-color: #ff5722; /* Change border color on hover */
+    background: #000000;
+    border-color: #ff5722;
 }
 
 

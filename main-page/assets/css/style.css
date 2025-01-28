@@ -170,6 +170,7 @@ body {
 .service-card:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-5px);
+    cursor: pointer;
 }
 
 
