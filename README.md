@@ -17,8 +17,6 @@
   <li align="center"> Co-Lead - Andrade, Kyla Mae E. </li>
   <li align="center"> Designer - Franco Jr. Eduardo S.</li>
   <li align="center"> Programmer - Velarde, Jairus Migual O. </li>
-  <br/>
-  <p> The objective of this website was to create a single-page website that introduces Techverse Innovation, showcases its offerings, and provides a way for potential clients to contact the company. </p>
 </div>
 <div align="center">
 </div>
