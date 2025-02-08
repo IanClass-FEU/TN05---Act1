@@ -148,11 +148,13 @@ if (submitButton) {
         }
     });
 }
+
 // FAQ Modal Functionality
 const faqButton = document.getElementById('faq-button');
 const faqModal = document.getElementById('faq-modal');
 const faqClose = document.querySelector('.faq-close');
 const faqTabs = document.querySelectorAll('.faq-tab');
+const faqSections = document.querySelectorAll('.faq-section'); // Select FAQ sections
 const faqItems = document.querySelectorAll('.faq-item');
 
 faqButton.addEventListener('click', () => {
@@ -169,15 +171,41 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// FAQ Accordion Effect
-document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-        const answer = button.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+// FAQ Category Switching - Fix for Disappearing Questions
+faqTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const category = tab.getAttribute('data-category');
+
+        // Remove active class from all tabs and hide all sections
+        faqTabs.forEach(t => t.classList.remove('active'));
+        faqSections.forEach(section => section.style.display = 'none');
+
+        // Activate the clicked tab and show corresponding FAQ section
+        tab.classList.add('active');
+        document.getElementById(category).style.display = 'block';
     });
 });
 
-// FAQ Category Switching
+// FAQ Accordion Effect with Animation
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('.toggle-icon');
+
+        // Toggle visibility of the answer
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+            icon.classList.replace("bi-caret-down-fill", "bi-caret-right-fill");
+        } else {
+            answer.style.display = "block";
+            icon.classList.replace("bi-caret-right-fill", "bi-caret-down-fill");
+        }
+    });
+});
+
+
+// FAQ Category Switching - Fix for Disappearing Questions
 faqTabs.forEach(tab => {
     tab.addEventListener('click', () => {
         const category = tab.getAttribute('data-category');
@@ -186,18 +214,20 @@ faqTabs.forEach(tab => {
         faqTabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
 
-        // Show/hide FAQ items based on category
-        faqItems.forEach(item => {
-            if (item.getAttribute('data-category') === category) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
+        // Hide all FAQ sections first
+        document.querySelectorAll('.faq-section').forEach(section => {
+            section.style.display = 'none';
         });
+
+        // Show the selected FAQ section and ensure its questions are visible
+        const activeSection = document.getElementById(category);
+        if (activeSection) {
+            activeSection.style.display = 'block';
+
+            // Ensure FAQ items inside the section are also visible
+            activeSection.querySelectorAll('.faq-item').forEach(item => {
+                item.style.display = 'block';
+            });
+        }
     });
 });
-
-
-
-
-

@@ -4,42 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <title>TechVerse Innovation</title>
 </head>
 <body>
-
     <div class="header-hero-wrapper">
-
         <header id="header">
             <img id="logo" src="./assets/img/logo.png" alt="TechVerse">
             <button id="menu-toggle" aria-label="Toggle menu">☰ MENU</button>
             <nav id="menu">
                 <button id="menu-close" aria-label="Close menu">×</button>
                 <ul>
-                    <li><a href="#about"> 01/ ABOUT US</a></li>
+                    <li><a href="#about">01/ ABOUT US</a></li>
                     <li><a href="#services">02/ OUR SERVICES</a></li>
                     <li><a href="#contact">03/ CONTACTS</a></li>
                     <li><a href="../index.html">04/ LANDING PAGE</a></li>
                 </ul>
             </nav>
         </header>
-
-
         <section class="hero">
             <a href="#about" class="cta-button">Learn More</a>
         </section>
     </div>
 
-
-
     <div class="modal-open-feedback">
         <i class="fas fa-star"> RATE</i>
     </div>
-    
-
 
     <div id="feedback-modal" class="modal-feedback">
         <div class="modal-content-feedback">
@@ -56,15 +49,11 @@
             <button class="submit-btn">Submit</button>
         </div>
     </div>
-    
 
-<div id="image-modal" class="modal-image">
-    <span class="modal-close">&times;</span>
-    <img class="modal-content" id="modal-image">
-</div>
-
-
-
+    <div id="image-modal" class="modal-image">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
 
     <section id="about" class="about">
         <div class="about-content">
@@ -73,169 +62,224 @@
     </section>
 
     <section id="services" class="services">
-    <div class="services">
         <div class="services-content">
             <img src="./assets/img/services.png" alt="Our Services" class="services-image">
         </div>
-
         <div class="service-card">
             <img src="./assets/img/ai.png" alt="Service 1" class="service-image" data-modal-image="./assets/img/airecap.png">
         </div>
-
         <div class="service-card">
             <img src="./assets/img/blockchain.png" alt="Service 2" class="service-image" data-modal-image="./assets/img/bcrecap.png">
         </div>
-
         <div class="service-card">
             <img src="./assets/img/iot.png" alt="Service 3" class="service-image" data-modal-image="./assets/img/iotrecap.png">
         </div>
-
         <div class="like-button-container">
             <p class="like-message">Was this section helpful?</p>
             <button class="like-button" aria-label="Like">
                 <i class="far fa-heart"></i> <span class="like-count">0</span>
             </button>
         </div>
-    </div>
-</section>
+    </section>
+    
+    <button id="faq-button" class="faq-button">FREQUENTLY ASKED QUESTIONS</button>
 
-<!-- FAQ Button to Open Modal -->
-<button id="faq-button" class="faq-button">FAQ</button>
-
-<!-- FAQ Modal -->
-<div id="faq-modal" class="faq-modal">
-    <div class="faq-modal-content">
-        <span class="faq-close">&times;</span>
-        <h2>Frequently Asked Questions</h2>
-
-        <!-- Category Tabs -->
-        <div class="faq-categories">
-            <button class="faq-tab active" data-category="blockchain">Blockchain</button>
-            <button class="faq-tab" data-category="ai">AI</button>
-            <button class="faq-tab" data-category="iot">IOT</button>
-            <button class="faq-tab" data-category="general">General</button>
-        </div>
-
-        <!-- FAQ Items -->
-        <div class="faq-items">
-            <!-- Blockchain Questions -->
-            <div class="faq-item" data-category="blockchain">
-                <button class="faq-question">What is Blockchain?</button>
-                <div class="faq-answer">Blockchain is a decentralized digital ledger...</div>
+    <div class="faq-modal" id="faq-modal">
+        <div class="faq-modal-content">
+            <span class="faq-close" id="close-faq">&times;</span>
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-tabs">
+                <button class="faq-tab active" data-category="blockchain">BLOCKCHAIN</button>
+                <button class="faq-tab" data-category="ai">ARTIFICIAL INTELLIGENCE</button>
+                <button class="faq-tab" data-category="iot">INTERNET OF THINGS</button>
+                <button class="faq-tab" data-category="general">GENERAL</button>
             </div>
-            <div class="faq-item" data-category="blockchain">
-                <button class="faq-question">How secure is Blockchain?</button>
-                <div class="faq-answer">Blockchain uses cryptographic security...</div>
-            </div>
-
-            <!-- AI Questions -->
-            <div class="faq-item" data-category="ai" style="display: none;">
-                <button class="faq-question">What is AI?</button>
-                <div class="faq-answer">AI stands for Artificial Intelligence...</div>
-            </div>
-            <div class="faq-item" data-category="ai" style="display: none;">
-                <button class="faq-question">How does AI learn?</button>
-                <div class="faq-answer">AI learns using machine learning algorithms...</div>
-            </div>
-
-            <!-- IOT Questions -->
-            <div class="faq-item" data-category="iot" style="display: none;">
-                <button class="faq-question">What is IoT?</button>
-                <div class="faq-answer">IoT stands for Internet of Things...</div>
-            </div>
-            <div class="faq-item" data-category="iot" style="display: none;">
-                <button class="faq-question">How does IoT work?</button>
-                <div class="faq-answer">IoT connects devices through the internet...</div>
-            </div>
-            <div class="faq-item" data-category="iot" style="display: none;">
-                <button class="faq-question">What is IoT?</button>
-                <div class="faq-answer">IoT stands for Internet of Things...</div>
-            </div>
-            <div class="faq-item" data-category="iot" style="display: none;">
-                <button class="faq-question">How does IoT work?</button>
-                <div class="faq-answer">IoT connects devices through the internet...</div>
-            </div>
-
-            <div class="faq-item" data-category="iot" style="display: none;">
-                <button class="faq-question">What is IoT?</button>
-                <div class="faq-answer">IoT stands for Internet of Things...</div>
-            </div>
-            <div class="faq-item" data-category="iot" style="display: none;">
-                <button class="faq-question">How does IoT work?</button>
-                <div class="faq-answer">IoT connects devices through the internet...</div>
-            </div>
-
-            <div class="faq-item" data-category="iot" style="display: none;">
-                <button class="faq-question">What is IoT?</button>
-                <div class="faq-answer">IoT stands for Internet of Things...</div>
-            </div>
-            <div class="faq-item" data-category="iot" style="display: none;">
-                <button class="faq-question">How does IoT work?</button>
-                <div class="faq-answer">IoT connects devices through the internet...</div>
-            </div>
-
-            <div class="faq-item" data-category="iot" style="display: none;">
-                <button class="faq-question">What is IoT?</button>
-                <div class="faq-answer">IoT stands for Internet of Things...</div>
-            </div>
-            <div class="faq-item" data-category="iot" style="display: none;">
-                <button class="faq-question">How does IoT work?</button>
-                <div class="faq-answer">IoT connects devices through the internet...</div>
-            </div>
-
-
-            <!-- General Questions -->
-            <div class="faq-item" data-category="general" style="display: none;">
-                <button class="faq-question">What is technology?</button>
-                <div class="faq-answer">Technology is the application of scientific knowledge...</div>
-            </div>
-            <div class="faq-item" data-category="general" style="display: none;">
-                <button class="faq-question">How does innovation impact our lives?</button>
-                <div class="faq-answer">Innovation drives progress and efficiency...</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-      
-
-
-<section id="contact" class="contact">
-    <div class="contact-container">
-        <img src="./assets/img/contactus.png" alt="Contact Us Background" class="contact-background">
-        
-        <div class="contact-content">
-            <div class="contact-wrapper">
-                <div class="social-icons">
-                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <div class="faq-section active" id="blockchain">
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
                 </div>
-
-                <!-- Contact Form -->
-                <form class="contact-form">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-
-                <div class="footer">
-                    <p>Innovating Today, Shaping Tomorrow</p>
-                    <p>© 2025 TechVerse Innovations.</p>
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div> <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+                
+            </div>
+            <div class="faq-section" id="ai">
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div> <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
                 </div>
             </div>
+            <div class="faq-section" id="iot">
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div> <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does IoT work?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">IoT connects devices through the internet...</div>
+                </div>
+            </div>
+            <div class="faq-section" id="general">
+                <div class="faq-item">
+                    <button class="faq-question">What is technology?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">Technology is the application of scientific knowledge...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What is technology?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">Technology is the application of scientific knowledge...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What is technology?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">Technology is the application of scientific knowledge...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What is technology?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">Technology is the application of scientific knowledge...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What is technology?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">Technology is the application of scientific knowledge...</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What is technology?
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">Technology is the application of scientific knowledge...</div>
+                </div>
+            </div>
         </div>
     </div>
-</section>
 
+    <section id="about" class="about">
+        <div class="about-content">
+            <img src="./assets/img/brandtrust.png" alt="About Us" class="about-image">
+        </div>
 
+        <section id="about" class="about">
+            <div class="about-content">
+                <img src="./assets/img/ourresults.png" alt="About Us" class="about-image">
+            </div>
+        </section>
+    </section>
 
-
-
-
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <img src="./assets/img/contactus.png" alt="Contact Us Background" class="contact-background">
+            <div class="contact-content">
+                <div class="contact-wrapper">
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="./assets/java/script.js"></script>
 </body>
