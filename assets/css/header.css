@@ -83,12 +83,13 @@
     padding: 10px 15px;
     transition: background 0.3s ease, color 0.3s ease;
     font-size: 20px;
+    border: 2px solid white;
 }
 
 #menu ul li a:hover {
-    background: #ff5722;
+    background: #000000c2;
     color: white;
-    border-radius: 5px;
+    border: 2px solid  #ec4f27;
 }
 
 

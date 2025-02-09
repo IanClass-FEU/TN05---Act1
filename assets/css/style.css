@@ -216,6 +216,7 @@ body {
     margin: 0 5px;
     border-radius: 0px;
     color: white;
+    font-size: 18px;
 }
 
 .faq-tab:hover {
@@ -256,7 +257,7 @@ body {
     padding: 10px;
     cursor: pointer;
     text-align: left;
-    font-size: 16px;
+    font-size: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -279,6 +280,7 @@ body {
     text-align: left;
     background: #414040a9;
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+    font-size: 20px;
 }
 
 /* When an FAQ item is opened */
