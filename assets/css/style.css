@@ -169,6 +169,8 @@ body {
 .service-card:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-5px);
+    border-color: #ec4f27;
+    cursor: pointer;
 }
 
 /* Full-screen overlay */
@@ -208,19 +210,30 @@ body {
 
 /* FAQ Button */
 .faq-button {
-    background-color: #333;
+    background-color: #33333300;
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid white; /* Adds a white border */
     cursor: pointer;
     margin: 20px auto;
     display: block;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 0px;
+    font-size: 40px;
 }
 
+
 .faq-button:hover {
-    background-color: #555;
+    background-color: #33333300;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #ec4f27;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    font-size: 18px;
+    border-radius: 0px;
+    font-size: 40px;
 }
 
 /* FAQ Modal Styles */
@@ -231,14 +244,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.938);
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
 
 .faq-modal-content {
-    background: white;
+    background: rgba(255, 255, 255, 0);
     padding: 20px;
     width: 50%;
     border-radius: 10px;
@@ -263,16 +276,28 @@ body {
 
 .faq-tab {
     padding: 10px 15px;
-    background: #ddd;
-    border: none;
+    background: #0a0a0a00;
+    border: 2px white solid;
     cursor: pointer;
     margin: 0 5px;
-    border-radius: 5px;
+    border-radius: 0px;
+    color: white;
+}
+
+.faq-tab:hover {
+    padding: 10px 15px;
+    background: #0a0a0a00;
+    border: 2px  #ec4f27 solid;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 0px;
+    color: white;
 }
 
 .faq-tab.active {
-    background: #555;
-    color: white;
+    background: #55555500;
+    color: rgb(248, 111, 32);
+    border: 2px rgb(248, 84, 19) solid;
 }
 
 /* FAQ Sections */
@@ -287,12 +312,12 @@ body {
 /* FAQ Questions */
 .faq-item {
     margin: 10px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 3px solid #ddd;
 }
 
 .faq-question {
     width: 100%;
-    background: #f4f4f4;
+    background: #f4f4f400;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -301,28 +326,68 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
 }
 
-/* FAQ Answer - initially hidden */
+.faq-question:hover {
+    color: #ec4f27; /* Change to any color you like */
+    font-weight: bold; /* Optional: Make it bold */
+    transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+
+/* FAQ Answer - Initially Hidden */
 .faq-answer {
-    display: none;
-    padding: 10px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 10px;
     text-align: left;
-    background: #ddd;
-    animation: slideDown 0.3s ease-in-out;
+    background: #414040a9;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
-/* Dropdown Animation */
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        max-height: 0;
-    }
-    to {
-        opacity: 1;
-        max-height: 200px;
-    }
+/* When an FAQ item is opened */
+.faq-item.active .faq-answer {
+    opacity: 1;
+    padding: 10px;
 }
+
+.faq-item.active .faq-question {
+    opacity: 1;
+    padding: 10px;
+    font-weight: bold;
+    color: #ec4f27;
+}
+
+
+/* When an FAQ item is closing */
+.faq-answer.closing {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 10px;
+}
+
+.like-button-container {
+    text-align: center;
+    font-size: 20px;
+}
+.like-button {
+    background-color: #eeeeee00; /* Default button color */
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 20px;
+}
+
+.like-button.liked {
+    background-color: rgba(255, 166, 0, 0); /* Turns orange when liked */
+    color: rgb(238, 104, 41);
+}
+
+
 
 /* Icon Styles */
 .toggle-icon {
@@ -341,6 +406,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0;
+    position: relative;
 }
 
 /* Contact Background Image */
@@ -349,6 +415,7 @@ body {
     height: auto;
     max-height: 100vh;
     display: block;
+    position: relative;
 }
 
 /* Contact Container */
@@ -414,7 +481,7 @@ body {
 .contact-form h2 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #333;
+    color: #ffffff;
 }
 
 .contact-form input,
@@ -422,9 +489,11 @@ body {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     font-size: 16px;
+    background-color: #33333300;
+    color: rgb(255, 255, 255);
 }
 
 .contact-form textarea {
@@ -435,9 +504,9 @@ body {
 .contact-form button {
     width: 100%;
     padding: 12px;
-    background: #333;
-    color: white;
-    border: none;
+    background: #33333300;
+    color: rgb(255, 255, 255);
+    border: #ccc 2px solid;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
@@ -445,7 +514,9 @@ body {
 }
 
 .contact-form button:hover {
-    background: #555;
+    background: #55555500;
+    border: #ff6600 2px solid;
+    color: #ff6600;
 }
 
 /* Responsive Design */
@@ -494,83 +565,124 @@ body {
 
 
 
-/* Button to trigger popup */
-.popup-button {
-    position: absolute;
+/* Button to Open Feedback Modal */
+.modal-open-feedback {
+    position: fixed;
     bottom: 20px;
     right: 20px;
-    background: white;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.637);
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 0px;
     cursor: pointer;
-    border: none;
+    border: #ccc solid 2px;
     font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    z-index: 2;
 }
 
-.popup-button:hover {
-    background-color: rgb(172, 31, 31);
-    color: white;
+.modal-open-feedback:hover {
+    background-color: rgba(243, 90, 29, 0);
+    border-color: #ec4f27;
+   color: #ec4f27;
 }
 
-/* Popup Form Styles */
-.popup-form {
+/* Modal Background */
+.modal-feedback {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.966); /* Dark overlay */
     justify-content: center;
     align-items: center;
-    z-index: 1001;
+    z-index: 99999 !important; /* Super high z-index */
 }
 
-.popup-content {
-    background: white;
-    padding: 30px;
-    border-radius: 5px;
-    width: 90%;
-    max-width: 400px;
+
+
+/* Modal Content */
+.modal-content-feedback {
+    width: 90%; /* Ensures modal itself is wider */
+    max-width: 500px; /* Prevents it from being too large */
     text-align: center;
-    color: black;
 }
 
-.popup-content input, .popup-content textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+.modal-content-feedback textarea {
+    display: block;
+    margin: 0 auto;
+    width: 100%; /* Fills the modal width */
+    max-width: 450px; /* Adjusts the max width */
+    height: 250px; /* Slightly taller */
+    padding: 12px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.popup-content button {
-    padding: 10px 20px;
-    background-color: black;
+    resize: none;
+    background-color: #00000000;
     color: white;
-    border: none;
+}
+
+
+
+
+.modal-content-feedback button {
+    width: 90%; /* Make button full width */
+    padding: 15px; /* Increase padding */
+    font-size: 18px; /* Adjust text size */
+    background: #ec4e2700; /* Button color */
+    color: white;
+    border: white solid 1px;
+    border-radius: 2px;
     cursor: pointer;
-    border-radius: 5px;
+    transition: border 0.3s ease;
 }
 
-.popup-content button:hover {
-    background-color: rgb(172, 31, 31);
+.modal-content-feedback button:hover {
+    border: rgb(255, 72, 26) solid 1px;
+    color: #ec4f27;
+    transition: border 0.3s ease;
 }
 
-/* Close button inside the popup */
-.close-popup {
-    position: absolute;
+
+
+/* Close Button */
+.modal-close-feedback {
+    position:fixed;
     top: 10px;
-    right: 10px;
+    right: 15px;
     font-size: 24px;
-    color: black;
+    color: rgb(255, 255, 255);
     cursor: pointer;
+    font-size: 100px
 }
 
-.close-popup:hover {
-    color: red;
+.modal-close-feedback:hover {
+    color: #ec4f2d;
 }
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.star {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.star:hover,
+.star.selected {
+    color: gold;
+}
+
 
 
 /* Responsive Adjustments */

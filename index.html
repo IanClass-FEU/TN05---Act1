@@ -25,30 +25,34 @@
                 </ul>
             </nav>
         </header>
-        <section class="hero">
-            <a href="#about" class="cta-button">Learn More</a>
-        </section>
+
     </div>
 
-    <div class="modal-open-feedback">
-        <i class="fas fa-star"> RATE</i>
-    </div>
+<!-- Feedback Button (Always on the Bottom Right) -->
+<div class="modal-open-feedback">
+    <i class="fas fa-star"></i> RATE
+</div>
 
-    <div id="feedback-modal" class="modal-feedback">
-        <div class="modal-content-feedback">
-            <span class="modal-close-feedback">&times;</span>
-            <h2>Feedback</h2>
-            <textarea placeholder="Leave your feedback here"></textarea>
-            <div class="star-rating">
-                <span class="star" data-value="1">&#9733;</span>
-                <span class="star" data-value="2">&#9733;</span>
-                <span class="star" data-value="3">&#9733;</span>
-                <span class="star" data-value="4">&#9733;</span>
-                <span class="star" data-value="5">&#9733;</span>
-            </div>
-            <button class="submit-btn">Submit</button>
+<!-- Feedback Modal -->
+<div id="feedback-modal" class="modal-feedback">
+    <div class="modal-content-feedback">
+        <span class="modal-close-feedback">&times;</span>
+        <h2>Feedback</h2>
+        <textarea placeholder="Leave your feedback here"></textarea>
+        
+        <!-- Star Rating -->
+        <div class="star-rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
         </div>
+        
+        <button class="submit-btn">Submit</button>
     </div>
+</div>
+
 
     <div id="image-modal" class="modal-image">
         <span class="modal-close">&times;</span>
@@ -73,12 +77,6 @@
         </div>
         <div class="service-card">
             <img src="./assets/img/iot.png" alt="Service 3" class="service-image" data-modal-image="./assets/img/iotrecap.png">
-        </div>
-        <div class="like-button-container">
-            <p class="like-message">Was this section helpful?</p>
-            <button class="like-button" aria-label="Like">
-                <i class="far fa-heart"></i> <span class="like-count">0</span>
-            </button>
         </div>
     </section>
     
@@ -247,6 +245,13 @@
         </div>
     </div>
 
+    <div class="like-button-container">
+        <p class="like-message">Was this section helpful?</p>
+        <button class="like-button" aria-label="Like">
+            <i class="far fa-heart"></i> <span class="like-count">0</span>
+        </button>
+    </div>
+
     <section id="about" class="about">
         <div class="about-content">
             <img src="./assets/img/brandtrust.png" alt="About Us" class="about-image">
@@ -254,7 +259,7 @@
 
         <section id="about" class="about">
             <div class="about-content">
-                <img src="./assets/img/ourresults.png" alt="About Us" class="about-image">
+                <img src="./assets/img/clientreviews.png" alt="About Us" class="about-image">
             </div>
         </section>
     </section>

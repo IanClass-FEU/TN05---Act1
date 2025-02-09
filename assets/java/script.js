@@ -154,17 +154,20 @@ const faqButton = document.getElementById('faq-button');
 const faqModal = document.getElementById('faq-modal');
 const faqClose = document.querySelector('.faq-close');
 const faqTabs = document.querySelectorAll('.faq-tab');
-const faqSections = document.querySelectorAll('.faq-section'); // Select FAQ sections
+const faqSections = document.querySelectorAll('.faq-section'); 
 const faqItems = document.querySelectorAll('.faq-item');
 
+// Open FAQ Modal
 faqButton.addEventListener('click', () => {
     faqModal.style.display = 'flex';
 });
 
+// Close FAQ Modal
 faqClose.addEventListener('click', () => {
     faqModal.style.display = 'none';
 });
 
+// Close FAQ Modal when clicking outside
 window.addEventListener('click', (event) => {
     if (event.target === faqModal) {
         faqModal.style.display = 'none';
@@ -176,58 +179,57 @@ faqTabs.forEach(tab => {
     tab.addEventListener('click', () => {
         const category = tab.getAttribute('data-category');
 
-        // Remove active class from all tabs and hide all sections
-        faqTabs.forEach(t => t.classList.remove('active'));
-        faqSections.forEach(section => section.style.display = 'none');
-
-        // Activate the clicked tab and show corresponding FAQ section
-        tab.classList.add('active');
-        document.getElementById(category).style.display = 'block';
-    });
-});
-
-// FAQ Accordion Effect with Animation
-document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-        const faqItem = button.parentElement;
-        const answer = button.nextElementSibling;
-        const icon = button.querySelector('.toggle-icon');
-
-        // Toggle visibility of the answer
-        if (answer.style.display === "block") {
-            answer.style.display = "none";
-            icon.classList.replace("bi-caret-down-fill", "bi-caret-right-fill");
-        } else {
-            answer.style.display = "block";
-            icon.classList.replace("bi-caret-right-fill", "bi-caret-down-fill");
-        }
-    });
-});
-
-
-// FAQ Category Switching - Fix for Disappearing Questions
-faqTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        const category = tab.getAttribute('data-category');
-
         // Remove active class from all tabs
         faqTabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
 
         // Hide all FAQ sections first
-        document.querySelectorAll('.faq-section').forEach(section => {
+        faqSections.forEach(section => {
             section.style.display = 'none';
         });
 
-        // Show the selected FAQ section and ensure its questions are visible
+        // Show the selected FAQ section
         const activeSection = document.getElementById(category);
         if (activeSection) {
             activeSection.style.display = 'block';
 
-            // Ensure FAQ items inside the section are also visible
+            // Ensure all FAQ items inside the section are visible
             activeSection.querySelectorAll('.faq-item').forEach(item => {
                 item.style.display = 'block';
             });
         }
     });
 });
+
+// FAQ Accordion Effect with Smooth Animation
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('.toggle-icon');
+
+        if (faqItem.classList.contains('active')) {
+            // Close the FAQ
+            answer.style.maxHeight = answer.scrollHeight + "px"; // Set maxHeight before closing to prevent jump
+            answer.classList.add('closing');
+            icon.classList.replace("bi-caret-down-fill", "bi-caret-right-fill");
+
+            setTimeout(() => {
+                answer.classList.remove('closing');
+                faqItem.classList.remove('active');
+                answer.style.maxHeight = "0"; // Reset height after animation
+            }, 200); // Matches transition duration
+        } else {
+            // Open the FAQ
+            faqItem.classList.add('active');
+            answer.style.maxHeight = answer.scrollHeight + "px"; // Dynamically set height
+            icon.classList.replace("bi-caret-right-fill", "bi-caret-down-fill");
+
+            setTimeout(() => {
+                answer.style.maxHeight = "none"; // Prevent height restriction after animation
+            }, 200);
+        }
+    });
+});
+
+
