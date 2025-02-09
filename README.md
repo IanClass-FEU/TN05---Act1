@@ -14,7 +14,7 @@
   <h3 align="center"> Activity 1 </h3>
   <h3 align="center"> Members </h3>
   <li align="center"> Project Lead - Tamayo, Ian Rey Angelo S.</li>
-  <li align="center"> Co-Lead - Andrade, Kyla Mae E. </li>
+  <li align="center"> Co-Lead - Andrade, Kyla Mae A. </li>
   <li align="center"> Designer - Franco Jr. Eduardo S.</li>
   <li align="center"> Co-designer - Velarde, Jairus Migual O. </li>
 </div>

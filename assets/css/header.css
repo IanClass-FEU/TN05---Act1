@@ -24,7 +24,7 @@
 
 /* Logo */
 #logo {
-    height: 400px; /* Large default size */
+    height: 300px; /* Large default size */
     max-height: 100vh; /* Prevents cropping */
     transition: height 0.3s ease;
     object-fit: contain; /* Ensures the logo fits inside */
@@ -82,6 +82,7 @@
     font-size: 18px;
     padding: 10px 15px;
     transition: background 0.3s ease, color 0.3s ease;
+    font-size: 20px;
 }
 
 #menu ul li a:hover {
@@ -90,14 +91,14 @@
     border-radius: 5px;
 }
 
-/* Responsive Fixes */
+
 @media (max-width: 768px) {
     #header {
         padding: 10px 20px;
     }
 
     #logo {
-        height: 150px; /* Prevents cutting */
+        height: 150px;
     }
 
     #header.scrolled #logo {
