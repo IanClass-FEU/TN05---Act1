@@ -421,11 +421,6 @@ body {
     align-items: center;
 }
 
-.contact-form h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #ffffff;
-}
 
 .contact-form input,
 .contact-form textarea {
@@ -434,13 +429,12 @@ body {
     margin-bottom: 15px;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
     background-color: #33333300;
     color: rgb(255, 255, 255);
 }
 
 .contact-form textarea {
-    height: 120px;
     resize: none;
 }
 
@@ -452,7 +446,7 @@ body {
     border: #ccc 2px solid;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     transition: background 0.3s ease;
 }
 
@@ -490,6 +484,7 @@ body {
     font-size: 22px;
     margin: 0 10px;
     transition: color 0.3s ease;
+    font-size: 40px;
 }
 
 .social-icons a:hover {
@@ -498,8 +493,8 @@ body {
 
 /* Footer */
 .footer {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 5%;
+    font-size: 20px;
     color: #ffffff;
 }
 
