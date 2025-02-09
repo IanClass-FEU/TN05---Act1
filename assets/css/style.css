@@ -412,6 +412,7 @@ body {
 }
 
 /* Contact Form */
+
 .contact-form {
     width: 100%;
     position: relative; /* Change from fixed to relative */

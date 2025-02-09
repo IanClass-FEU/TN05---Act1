@@ -1,7 +1,8 @@
-
+/* Header */
 #header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -9,10 +10,11 @@
     padding: 20px 30px;
     background: transparent;
     z-index: 1000;
+    height: auto; /* Allows flexibility */
     transition: background 0.3s ease, padding 0.3s ease;
 }
 
-
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -20,33 +22,48 @@
     width: 100%;
 }
 
-
+/* Logo */
 #logo {
-    height: 400px; /* Large Logo */
+    height: 400px; /* Large default size */
+    max-height: 100vh; /* Prevents cropping */
     transition: height 0.3s ease;
+    object-fit: contain; /* Ensures the logo fits inside */
 }
 
-
+/* When scrolling */
 #header.scrolled {
     background: rgba(0, 0, 0, 0.8);
     padding: 10px 30px;
 }
 
 #header.scrolled #logo {
-    height: 80px !important;
+    height: 80px !important; /* Smooth shrink effect */
 }
 
-
+/* Menu */
 #menu {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 50px;
-    left: 20%;
+    top: 10px; /* Keeps it at the top */
+    left: 0;
     width: 100%;
+    padding-top: 10px; /* Prevents overlap */
 }
 
+/* Menu */
+#menu {
+    display: flex;
+    justify-content: flex-end; /* Move menu to the right */
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 30px; /* Ensure it's aligned to the right */
+    width: auto; /* Adjust width dynamically */
+}
 
+/* Menu Items */
 #menu ul {
     display: flex;
     gap: 20px;
@@ -73,3 +90,17 @@
     border-radius: 5px;
 }
 
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    #header {
+        padding: 10px 20px;
+    }
+
+    #logo {
+        height: 150px; /* Prevents cutting */
+    }
+
+    #header.scrolled #logo {
+        height: 60px;
+    }
+}
