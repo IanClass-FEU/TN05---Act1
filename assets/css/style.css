@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,7 +13,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Wrapper for Header and Hero Section */
+
 .header-hero-wrapper {
     position: relative;
     background-image: url('../img/heroback.png');
@@ -25,7 +25,7 @@ body {
     flex-direction: column;
 }
 
-/* Hero Section */
+
 .hero {
     color: white;
     text-align: left;
@@ -39,72 +39,6 @@ body {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-}
-
-.cta-button {
-    background: white;
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-}
-
-.cta-button:hover {
-    background: rgb(172, 31, 31);
-    color: white;
-    border: 1px solid white;
-}
-
-/* Header */
-#header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    z-index: 1000;
-    transition: all 0.3s;
-}
-
-#header.scrolled {
-    padding: 5px 10px;
-}
-
-#logo {
-    height: 100px;
-    transition: height 0.3s;
-}
-
-#menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 10px;
-    z-index: 1000;
-}
-
-#menu.open {
-    display: flex;
-}
-
-#menu ul {
-    list-style: none;
-}
-
-#menu li {
-    margin: 10px 0;
-}
-
-#menu a {
-    color: white;
-    text-decoration: none;
 }
 
 /* Sections */
@@ -175,7 +109,7 @@ body {
 
 /* Full-screen overlay */
 .modal-image {
-    display: none; /* Ensure it remains hidden initially */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -213,7 +147,7 @@ body {
     background-color: #33333300;
     color: white;
     padding: 10px 20px;
-    border: 2px solid white; /* Adds a white border */
+    border: 2px solid white;
     cursor: pointer;
     margin: 20px auto;
     display: block;
@@ -330,9 +264,9 @@ body {
 }
 
 .faq-question:hover {
-    color: #ec4f27; /* Change to any color you like */
-    font-weight: bold; /* Optional: Make it bold */
-    transition: color 0.3s ease-in-out; /* Smooth transition */
+    color: #ec4f27; 
+    font-weight: bold; 
+    transition: color 0.3s ease-in-out; 
 }
 
 
@@ -373,7 +307,7 @@ body {
     font-size: 20px;
 }
 .like-button {
-    background-color: #eeeeee00; /* Default button color */
+    background-color: #eeeeee00; 
     color: #ffffff;
     border: none;
     padding: 8px 15px;
@@ -383,7 +317,7 @@ body {
 }
 
 .like-button.liked {
-    background-color: rgba(255, 166, 0, 0); /* Turns orange when liked */
+    background-color: rgba(255, 166, 0, 0); 
     color: rgb(238, 104, 41);
 }
 
@@ -430,7 +364,7 @@ body {
 /* Contact Content (Holds Social Icons + Form) */
 .contact-content {
     position: absolute;
-    bottom: 5%;
+    bottom: 5%; /* Keeps it near the bottom */
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -440,6 +374,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Social Icons (Above Form) */
@@ -451,6 +388,7 @@ body {
 
 .social-icons {
     margin-bottom: 15px;
+    bottom:400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -476,6 +414,11 @@ body {
 /* Contact Form */
 .contact-form {
     width: 100%;
+    position: relative; /* Change from fixed to relative */
+    bottom: auto; /* Remove fixed positioning */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-form h2 {
@@ -531,15 +474,13 @@ body {
     }
 }
 
-
-
 /* Social Icons */
 .social-icons {
-    display: flex;
-    flex-direction: row; /* Change from column to row */
-    justify-content: center; /* Center icons horizontally */
+    position: fixed;
+    flex-direction: row; 
+    justify-content: center; 
     align-items: center;
-    gap: 15px; /* Add spacing between icons */
+    gap: 15px; 
     margin-bottom: 15px;
 }
 
@@ -596,27 +537,27 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.966); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.966); 
     justify-content: center;
     align-items: center;
-    z-index: 99999 !important; /* Super high z-index */
+    z-index: 99999 !important; 
 }
 
 
 
 /* Modal Content */
 .modal-content-feedback {
-    width: 90%; /* Ensures modal itself is wider */
-    max-width: 500px; /* Prevents it from being too large */
+    width: 90%; 
+    max-width: 500px; 
     text-align: center;
 }
 
 .modal-content-feedback textarea {
     display: block;
     margin: 0 auto;
-    width: 100%; /* Fills the modal width */
-    max-width: 450px; /* Adjusts the max width */
-    height: 250px; /* Slightly taller */
+    width: 100%; 
+    max-width: 450px; 
+    height: 250px; 
     padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -630,10 +571,10 @@ body {
 
 
 .modal-content-feedback button {
-    width: 90%; /* Make button full width */
-    padding: 15px; /* Increase padding */
-    font-size: 18px; /* Adjust text size */
-    background: #ec4e2700; /* Button color */
+    width: 90%; 
+    padding: 15px; 
+    font-size: 18px; 
+    background: #ec4e2700; 
     color: white;
     border: white solid 1px;
     border-radius: 2px;

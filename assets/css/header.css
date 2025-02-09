@@ -6,117 +6,70 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 30px;
+    background: transparent;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0);
-    transition: background 0.3s, padding 0.3s;
+    transition: background 0.3s ease, padding 0.3s ease;
 }
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+#logo {
+    height: 400px; /* Large Logo */
+    transition: height 0.3s ease;
+}
+
 
 #header.scrolled {
-    background: rgba(0, 0, 0, 0);
-    padding: 5px 20px;
-}
-
-/* Logo */
-#logo {
-    height: 450px;
-    transition: height 0.3s ease;
-    z-index: 1100;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 30px;
 }
 
 #header.scrolled #logo {
-    height: 80px;
-}
-
-#menu-close {
-    font-size: 36px;
-    color: rgb(255, 255, 255);
-    background: none;
-    border: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    z-index: 1200;
-    transition: color 0.3s ease;
+    height: 80px !important;
 }
 
 
-#menu-close:hover {
-    color: #ff5722;
-}
-
-
-#menu-close:active {
-    color: #e64a19;
-}
-
-
-
-#menu.open {
-    right: 0;
-}
-
-
-/* Menu Items */
 #menu {
-    position: absolute;
-    top: 0;
-    right: -500px;
-    height: 100vh;
-    width: 500px;
-    background: black;
-    background-image: url('../img/menuback.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: right 0.3s ease;
-    z-index: 1100;
     display: flex;
     justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 500px;
+    width: 100%;
 }
 
+
+#menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 #menu ul li {
-    margin: 20px 0;
+    margin: 0;
 }
-
 
 #menu ul li a {
     color: white;
-    border: solid white;
     text-decoration: none;
     font-size: 18px;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    width: 400px;
+    padding: 10px 15px;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
 #menu ul li a:hover {
     background: #ff5722;
     color: white;
+    border-radius: 5px;
 }
-
-#menu-toggle {
-    font-size: 24px;
-    background: rgba(0, 0, 0, 0.164);
-    border: solid rgba(0, 0, 0, 0.160);
-    color: white;
-    cursor: pointer;
-    z-index: 1100;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    padding: 10px 15px;
-    transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-#menu-toggle:hover {
-    background: #000000;
-    border-color: #ff5722;
-}
-
 

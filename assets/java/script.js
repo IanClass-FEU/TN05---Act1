@@ -1,4 +1,4 @@
-// Shrink the logo and header on scroll
+
 const header = document.getElementById('header');
 const logo = document.getElementById('logo');
 
@@ -210,26 +210,24 @@ document.querySelectorAll('.faq-question').forEach(button => {
 
         if (faqItem.classList.contains('active')) {
             // Close the FAQ
-            answer.style.maxHeight = answer.scrollHeight + "px"; // Set maxHeight before closing to prevent jump
+            answer.style.maxHeight = answer.scrollHeight + "px";
             answer.classList.add('closing');
             icon.classList.replace("bi-caret-down-fill", "bi-caret-right-fill");
 
             setTimeout(() => {
                 answer.classList.remove('closing');
                 faqItem.classList.remove('active');
-                answer.style.maxHeight = "0"; // Reset height after animation
-            }, 200); // Matches transition duration
+                answer.style.maxHeight = "0"; 
+            }, 200);
         } else {
             // Open the FAQ
             faqItem.classList.add('active');
-            answer.style.maxHeight = answer.scrollHeight + "px"; // Dynamically set height
+            answer.style.maxHeight = answer.scrollHeight + "px"; 
             icon.classList.replace("bi-caret-right-fill", "bi-caret-down-fill");
 
             setTimeout(() => {
-                answer.style.maxHeight = "none"; // Prevent height restriction after animation
+                answer.style.maxHeight = "none"; 
             }, 200);
         }
     });
 });
-
-
