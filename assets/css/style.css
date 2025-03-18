@@ -42,6 +42,16 @@ body {
 }
 
 /* Sections */
+.image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .about, .services, .contact {
     padding: 50px 20px;
     text-align: center;

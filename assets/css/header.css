@@ -37,7 +37,7 @@
 }
 
 #header.scrolled #logo {
-    height: 80px !important; /* Smooth shrink effect */
+    height: 45px !important; /* Smooth shrink effect */
 }
 
 /* Menu */
