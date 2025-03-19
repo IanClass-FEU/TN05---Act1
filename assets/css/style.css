@@ -52,6 +52,13 @@ body {
     flex-direction: column;
 }
 
+.full-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
 .about, .services, .contact {
     padding: 50px 20px;
     text-align: center;
