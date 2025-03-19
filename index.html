@@ -16,9 +16,11 @@
             <img id="logo" src="./assets/img/citadel.png" alt="TechVerse">
             <nav id="menu">
                 <ul>
-                    <li><a href="#about">01/ ABOUT US</a></li>
-                    <li><a href="#services">02/ OUR SERVICES</a></li>
-                    <li><a href="#contact">03/ CONTACTS</a></li>
+                    <li><a href="#problems">01/ PROBLEM</a></li>
+                    <li><a href="#solution">02/ OUR SOLUTION</a></li>
+                    <li><a href="#components">03/ KEY COMPONENTS</a></li>
+                    <li><a href="#how">04/ HOW IT WORKS</a></li>
+                    <li><a href="#prototype">05/ PROTOTYPE</a></li>
                 </ul>
             </nav>
         </header>
@@ -59,21 +61,21 @@
 
 
   <div class="image" style="background-image: url('./assets/img/problemback.png');">
-    <section id="services" class="services">
+    <section id="problems" class="services">
        
         <div class="services-content">
             <img src="./assets/img/problemintro.png" alt="Our Services" class="services-image">
         </div>
         <div class="service-card">
-            <img src="./assets/img/water.png" alt="Service 1" class="service-image" data-modal-image="./assets/img/airecap.png">
+            <img src="./assets/img/water.png" alt="Service 1" class="service-image" data-modal-image="./assets/img/scarcity recap.png">
         </div>
         <div class="service-card">
-            <img src="./assets/img/irrig.png" alt="Service 2" class="service-image" data-modal-image="./assets/img/bcrecap.png">
+            <img src="./assets/img/irrig.png" alt="Service 2" class="service-image" data-modal-image="./assets/img/irrigatiorecap.png">
         </div>
         <div class="service-card">
-            <img src="./assets/img/labor.png" alt="Service 3" class="service-image" data-modal-image="./assets/img/iotrecap.png">
+            <img src="./assets/img/labor.png" alt="Service 3" class="service-image" data-modal-image="./assets/img/laborrecap.png">
         </div>
-        <button id="faq-button" class="faq-button">FREQUENTLY ASKED QUESTIONS</button>\
+        <button id="faq-button" class="faq-button">REFERENCES</button>\
         <div class="like-button-container">
             <p class="like-message">Was this section helpful?</p>
             <button class="like-button" aria-label="Like">
@@ -87,258 +89,224 @@
     <div class="faq-modal" id="faq-modal">
         <div class="faq-modal-content">
             <span class="faq-close" id="close-faq">&times;</span>
-            <h2>Frequently Asked Questions</h2>
+            <h2>REFERENCES</h2>
             <div class="faq-tabs">
-                <button class="faq-tab active" data-category="blockchain">BLOCKCHAIN</button>
-                <button class="faq-tab" data-category="ai">ARTIFICIAL INTELLIGENCE</button>
-                <button class="faq-tab" data-category="iot">INTERNET OF THINGS</button>
-                <button class="faq-tab" data-category="general">GENERAL</button>
+                <button class="faq-tab active" data-category="blockchain">WATER SCARCITY</button>
+                <button class="faq-tab" data-category="ai">INNEFICIENT IRRIGATION</button>
+                <button class="faq-tab" data-category="iot">LABOR INTENSIVE</button>
             </div>
 
             <!-- BLOCKCHAIN -->
             <div class="faq-section active" id="blockchain">
                 <div class="faq-item">
-                    <button class="faq-question">What is Blockchain?
+                    <button class="faq-question">World Wildlife Fund (WWF)
                         <i class="bi bi-caret-right-fill toggle-icon"></i>
                     </button>
-                    <div class="faq-answer">Blockchain is a special type of database that stores information securely and transparently. Instead of having one central authority controlling data, blockchain records information in "blocks" that are linked together in a chain. Each block contains a record of transactions, and once added, it cannot be changed. This makes blockchain highly secure and trustworthy. It is the technology behind cryptocurrencies like Bitcoin, but it can also be used for secure voting, supply chain tracking, and digital contracts.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">How does Blockchain work?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">Blockchain works by using a decentralized network of computers that verify and store transactions. When a new transaction happens, it is grouped with others into a block. This block is then checked by multiple computers (called nodes) in the network. If the majority agrees that the transaction is valid, the block is added to the chain permanently. This process makes blockchain highly secure because no single person or company controls the data, and it is nearly impossible to alter past records.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Why is Blockchain considered secure?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">Blockchain is secure because of its decentralized nature and cryptographic protection. Since data is stored across many computers instead of a single server, it is difficult for hackers to alter or delete information. Every block contains a unique digital fingerprint (called a hash) and is linked to the previous block. If someone tries to change one block, they would have to change every block in the chain, which is practically impossible. This makes blockchain one of the safest ways to store and transfer data.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">What are cryptocurrencies, and how do they use Blockchain?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">Cryptocurrencies, like Bitcoin and Ethereum, are digital currencies that use blockchain technology to operate. Instead of relying on banks, cryptocurrencies use a decentralized blockchain network to record transactions securely. When you send Bitcoin to someone, the transaction is verified by the blockchain and recorded permanently. Because of blockchain, cryptocurrencies are transparent, fast, and secure, allowing people to send money globally without needing a bank or financial institution.</div>
-                </div> <div class="faq-item">
-                    <button class="faq-question">Can Blockchain be used for things other than cryptocurrency?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">Yes! While blockchain is best known for powering cryptocurrencies, it has many other uses. It can be used in supply chain management to track products from production to delivery, in healthcare to store patient records securely, and in voting systems to prevent fraud. Smart contracts, which are self-executing agreements written on a blockchain, can automate legal and business processes. Many industries are exploring blockchain to improve security, transparency, and efficiency.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">What is the future of Blockchain?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">The future of blockchain looks promising, with many industries adopting it for secure and transparent data management. Governments are exploring blockchain for secure voting, businesses are using it to prevent fraud, and banks are looking at ways to process transactions faster. However, blockchain still faces challenges like scalability, energy consumption, and regulation. As technology improves, blockchain could revolutionize finance, healthcare, supply chains, and even how we interact with digital services.</div>
+                    <div class="faq-answer">
+                        This page discusses the global issue of water scarcity, highlighting that approximately 1.1 billion people worldwide lack access to water, and a total of 2.7 billion experience water scarcity for at least one month each year.
+                        <a href="https://www.worldwildlife.org/threats/water-scarcity" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
                 </div>
                 
+                <div class="faq-item">
+                    <button class="faq-question">UNICEF - Water Scarcity
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        UNICEF's page provides insights into the challenges posed by water scarcity, noting that four billion people—almost two-thirds of the world's population—experience severe water scarcity for at least one month each year.
+                        <a href="https://www.unicef.org/wash/water-scarcity" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">UNESCO - UN World Water Development Report 2023
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        This report warns of the imminent risk of a global water crisis, stating that between two and three billion people experience water shortages for at least one month per year, posing severe risks to livelihoods.
+                        <a href="https://www.unesco.org/en/articles/imminent-risk-global-water-crisis-warns-un-world-water-development-report-2023" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">Water.org - Global Water Crisis
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Water.org highlights that 2.2 billion people in the world lack access to safe water, emphasizing the severity of the global water crisis.
+                        <a href="https://water.org/about-us/news-press/how-many-people-are-affected-by-the-global-water-crisis-2024/" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">UNESCO - UN World Water Development Report
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        This report indicates that roughly half of the world's population experiences severe water scarcity for at least part of the year, underscoring the widespread nature of the issue.
+                        <a href="https://www.unesco.org/reports/wwdr/en/2024/s" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
+                </div>
             </div>
 
             <!-- AI -->
             <div class="faq-section" id="ai">
                 <div class="faq-item">
-                    <button class="faq-question">What is Artificial Intelligence (AI)?
+                    <button class="faq-question">Global Agricultural Water Consumption
                         <i class="bi bi-caret-right-fill toggle-icon"></i>
                     </button>
-                    <div class="faq-answer">Artificial Intelligence (AI) is the ability of computers and machines to think, learn, and make decisions like humans. Instead of just following instructions, AI can analyze data, recognize patterns, and improve over time. It powers things like voice assistants, self-driving cars, and recommendation systems on platforms like YouTube and Netflix. AI helps automate tasks, making life easier, but it still requires human guidance to function effectively.</div>
+                    <div class="faq-answer">
+                        Inefficient irrigation practices significantly impact global water resources, particularly in agriculture, which consumes approximately 70% of the world's accessible freshwater.
+                        <a href="https://www.fao.org/3/i2800e/i2800e.pdf" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
                 </div>
+                
                 <div class="faq-item">
-                    <button class="faq-question">How does AI learn?
+                    <button class="faq-question">Irrigation Water Use in the Philippines
                         <i class="bi bi-caret-right-fill toggle-icon"></i>
                     </button>
-                    <div class="faq-answer">AI learns through a process called machine learning, where it studies large amounts of data to identify patterns and make predictions. Just like a person learning from experience, AI improves the more it practices. Some AI systems learn by being trained with correct answers (supervised learning), while others figure things out on their own (unsupervised learning). Over time, AI becomes better at understanding and solving problems, similar to how we learn from our mistakes and experiences.</div>
+                    <div class="faq-answer">
+                        In the Philippines, irrigation is the largest consumer of water, accounting for 80% of the country's consumptive use.
+                        <a href="https://www.nia.gov.ph/sites/default/files/pdf/irrigation-development-plan.pdf" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
                 </div>
+                
                 <div class="faq-item">
-                    <button class="faq-question">Will AI replace human jobs?
+                    <button class="faq-question">Water Loss in Traditional Irrigation
                         <i class="bi bi-caret-right-fill toggle-icon"></i>
                     </button>
-                    <div class="faq-answer">AI will automate some jobs, but it will also create new opportunities. Repetitive tasks, such as data entry or customer service chatbots, can be handled by AI, freeing up people to focus on creative and strategic work. Instead of replacing humans entirely, AI will likely assist workers and make jobs more efficient. While some roles may disappear, new jobs in AI development, maintenance, and oversight will emerge, requiring people to adapt and learn new skills.</div>
+                    <div class="faq-answer">
+                        Traditional irrigation methods often result in substantial water loss due to evaporation, runoff, or seepage.
+                        <a href="https://www.icid.org/wat_scarcity.pdf" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
                 </div>
+                
                 <div class="faq-item">
-                    <button class="faq-question">Can AI think like a human?
+                    <button class="faq-question">Water Withdrawal in Asia
                         <i class="bi bi-caret-right-fill toggle-icon"></i>
                     </button>
-                    <div class="faq-answer">No, AI does not think like a human. While it can process information quickly and make decisions based on data, it lacks emotions, consciousness, and true understanding. AI follows rules and patterns but does not have personal experiences, creativity, or the ability to feel emotions like humans do. It may seem smart, but it only acts based on the data and instructions it receives.</div>
-                </div> <div class="faq-item">
-                    <button class="faq-question">Is AI dangerous?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">AI itself is not dangerous, but how people use it can be. If used irresponsibly, AI can spread misinformation, invade privacy, or even automate harmful tasks. However, with proper regulations and ethical guidelines, AI can be a powerful tool for good. It can help in medicine, education, and even solving complex problems like climate change. The key is to use AI wisely and ensure it benefits society rather than causing harm.</div>
+                    <div class="faq-answer">
+                        In Asia, the average water withdrawal per hectare of irrigated land is about 8,900 cubic meters per year.
+                        <a href="https://www.adb.org/publications/asian-water-development-outlook-2020" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
                 </div>
+                
                 <div class="faq-item">
-                    <button class="faq-question">What is the future of AI?
+                    <button class="faq-question">Irrigation Water Use in the Philippines
                         <i class="bi bi-caret-right-fill toggle-icon"></i>
                     </button>
-                    <div class="faq-answer">The future of AI is exciting and full of possibilities. AI will continue to improve and be used in almost every industry, from healthcare to transportation. It may help scientists discover new medicines, assist in space exploration, and even improve daily life with smarter personal assistants. However, humans will always need to guide AI to ensure it is used ethically and responsibly. The key to the future is finding a balance between AI innovation and human oversight.</div>
+                    <div class="faq-answer">
+                        The Philippines exhibits high water withdrawal rates, ranging from 15,000 to 31,500 cubic meters per hectare annually.
+                        <a href="https://www.denr.gov.ph/water-resources-status-report.pdf" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
                 </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">Impact of Inefficient Irrigation on Water Scarcity
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        This inefficiency exacerbates water scarcity, especially in regions where water resources are already stressed.
+                        <a href="https://www.unwater.org/water-facts/scarcity/" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
+                </div>
+                
             </div>
 
             <!-- IOT -->
             <div class="faq-section" id="iot">
                 <div class="faq-item">
-                    <button class="faq-question">What is the Internet of Things (IoT)?
+                    <button class="faq-question">Manual Irrigation Practices in the Philippines
                         <i class="bi bi-caret-right-fill toggle-icon"></i>
                     </button>
-                    <div class="faq-answer">The Internet of Things (IoT) refers to a network of physical devices, appliances, and objects that are connected to the internet and can communicate with each other. These devices collect and share data, helping to automate tasks and improve efficiency. Examples include smart home gadgets like Alexa, fitness trackers, smart thermostats, and even self-driving cars. IoT makes life more convenient by allowing devices to work together without human input.</div>
+                    <div class="faq-answer">
+                        Traditional irrigation methods in the Philippines, such as using buckets and hoses, are labor-intensive and time-consuming, leading to uneven water distribution and reduced farm productivity.
+                        <a href="https://pubs.aip.org/aip/acp/article/2482/1/110003/2867471/Development-of-a-farm-scale-agricultural-water" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">Labor-Intensive Irrigation in the Cordilleras
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Establishing pipe irrigation in the mountainous Cordillera region remains labor-intensive due to challenging terrain, requiring strenuous and extensive hiking with carried loads.
+                        <a href="https://car.nia.gov.ph/?q=content%2Firrigation-mountainous-cordilleras-1" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">Automated Furrow Irrigation System (AFIS)
+                        <i class="bi bi-caret-right-fill toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        The Automated Furrow Irrigation System (AFIS) helps save water and improve crop yield by easing the labor burden associated with traditional irrigation methods.
+                        <a href="https://www.pcaarrd.dost.gov.ph/index.php/quick-information-dispatch-qid-articles/automated-furrow-irrigation-system-helps-save-water-ensures-high-yield" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">How does IoT work?
+                    <button class="faq-question">Development of a Farm-Scale Agricultural Water Sprinkler for Crop Irrigation
                         <i class="bi bi-caret-right-fill toggle-icon"></i>
                     </button>
-                    <div class="faq-answer">IoT devices use sensors, software, and internet connectivity to collect and exchange data. These devices send information to a cloud-based system or another device for processing. For example, a smart thermostat can sense the temperature in your home, send data to an app on your phone, and adjust the temperature automatically based on your preferences. IoT relies on wireless networks, data analytics, and automation to function smoothly.</div>
+                    <div class="faq-answer">
+                        This study highlights that traditional irrigation methods in the Philippines, such as using pales, buckets, and water hoses, are time-consuming, labor-intensive, and inefficient. The research focuses on enhancing the design of a traveling water gun sprinkler mounted on a motorized watering cart to improve irrigation efficiency.
+                        <a href="https://pubs.aip.org/aip/acp/article/2482/1/110003/2867471/Development-of-a-farm-scale-agricultural-water" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
                 </div>
+                
                 <div class="faq-item">
-                    <button class="faq-question">Why is IoT important?
+                    <button class="faq-question">Irrigation Infrastructure and Farm Productivity in the Philippines
                         <i class="bi bi-caret-right-fill toggle-icon"></i>
                     </button>
-                    <div class="faq-answer">IoT is important because it helps improve efficiency, convenience, and decision-making in many areas of life. In homes, IoT makes devices smarter, reducing energy usage and improving security. In industries, IoT helps monitor equipment, reduce maintenance costs, and improve productivity. In healthcare, IoT can track patient health in real-time using wearable devices. The ability to collect and analyze data from everyday objects helps businesses and individuals save time and resources.</div>
+                    <div class="faq-answer">
+                        This paper analyzes the impact of canal irrigation projects for smallholders in the Philippines, focusing on rice production. It discusses how improved irrigation infrastructure can enhance farm productivity and reduce the labor-intensive nature of traditional irrigation practices.
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0305750X20301996" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
                 </div>
+                
                 <div class="faq-item">
-                    <button class="faq-question">What are the risks and challenges of IoT?
+                    <button class="faq-question">Smart Water Management through Automated Furrow Irrigation System
                         <i class="bi bi-caret-right-fill toggle-icon"></i>
                     </button>
-                    <div class="faq-answer">While IoT offers many benefits, it also comes with risks. Security is one of the biggest concerns because connected devices can be hacked, leading to privacy breaches or cyberattacks. Many IoT devices collect personal data, which raises concerns about who controls and protects this information. Additionally, IoT networks require strong internet connections and reliable software updates to function properly. Companies are working on better encryption and security measures to address these challenges..</div>
-                </div> <div class="faq-item">
-                    <button class="faq-question">How is IoT different from the traditional internet?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">The traditional internet connects people through computers, smartphones, and web services, allowing them to communicate and share information. IoT, on the other hand, connects physical objects—such as home appliances, vehicles, and industrial machines—allowing them to collect and exchange data without human intervention.
-
-                        For example, when you browse the internet on your phone, you are actively searching for information. In contrast, an IoT-enabled smart thermostat can automatically adjust your home’s temperature based on the weather and your preferences, without needing your input. This ability to automate tasks and analyze real-time data makes IoT unique compared to the traditional internet.
-                        .</div>
+                    <div class="faq-answer">
+                        Automating traditional furrow irrigation systems eases the labor-intensive burden on farmers. The Automated Furrow Irrigation System (AFIS) ensures that water is applied precisely, improving efficiency and reducing the physical effort required from farmers.
+                        <a href="https://ispweb.pcaarrd.dost.gov.ph/smart-water-management-through-automated-furrow-irrigation-system/" target="_blank" rel="noopener noreferrer">Learn more</a>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">What does the future of IoT look like?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">The future of IoT is exciting, with more smart devices and improved connectivity. With the rise of 5G, IoT devices will be able to communicate faster and handle more data. Smart cities will use IoT for traffic control, waste management, and energy savings. Healthcare will continue to advance with remote monitoring and AI-powered diagnostics. However, IoT security and privacy challenges must be addressed to ensure safe and widespread adoption.</div>
-                </div>
+                
+                
             </div>
 
-            <!-- GENERAL -->
-            <div class="faq-section" id="general">
-                <div class="faq-item">
-                    <button class="faq-question">What is TechVerse Innovation, and what do we do?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">TechVerse Innovation is a technology solutions provider that helps small and medium-sized businesses (SMBs) leverage modern technologies like Artificial Intelligence (AI), Blockchain, and the Internet of Things (IoT). Our goal is to provide innovative, sustainable, and cost-effective tech solutions that improve efficiency, security, and customer experience for businesses of all kinds.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">How can AI help my small or medium business?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">AI can automate repetitive tasks, improve customer interactions, and provide valuable insights from data. Whether it’s using AI-powered chatbots for customer service, automating business processes, or analyzing market trends, we help businesses integrate AI solutions that save time and boost productivity.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">What are the benefits of Blockchain for businesses?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">Blockchain offers enhanced security, transparency, and efficiency for business transactions. It’s ideal for secure payment processing, supply chain management, and data protection. At TechVerse Innovation, we help businesses integrate blockchain to improve trust, reduce fraud, and streamline operations..</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">How can IoT improve business operations?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">IoT enables businesses to connect and monitor devices in real time, leading to improved efficiency and smarter decision-making. Whether it’s tracking inventory, optimizing energy use, or automating manufacturing processes, we provide IoT solutions tailored to business needs.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Is your technology affordable for small businesses?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">Yes! We specialize in providing scalable and cost-effective tech solutions that fit different budgets. Whether you're a startup or an established company, we design solutions that maximize value while keeping costs manageable.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">How can my business get started with TechVerse Innovation?
-                        <i class="bi bi-caret-right-fill toggle-icon"></i>
-                    </button>
-                    <div class="faq-answer">Getting started is simple! Contact us through our website or visit our office for a consultation. We’ll discuss your business needs, recommend the right technologies, and create a customized plan to help your business grow with AI, Blockchain, and IoT.</div>
-                </div>
-            </div>
+
         </div>
     </div>
 
+    <secttion id="solution">
     <img src="./assets/img/fullimg.png" class="full-img" alt="Tall Image">
+</secttion>
 
-
+<section id="components"> </section>
     <div class="image" style="background-image: url('./assets/img/keyccompoback.png');">
-        <section id="services" class="services">
+        <div class="services">
 
             <div class="service-card">
-                <img src="./assets/img/compo1.png" alt="Service 1" class="service-image" data-modal-image="./assets/img/compo1.png">
+                <img src="./assets/img/compo1.png" alt="Service 1" class="service-image" data-modal-image="./assets/img/compo1recap.png">
             </div>
             <div class="service-card">
-                <img src="./assets/img/compo2.png" alt="Service 2" class="service-image" data-modal-image="./assets/img/compo2.png">
+                <img src="./assets/img/compo2.png" alt="Service 2" class="service-image" data-modal-image="./assets/img/compo2recap.png">
             </div>
             <div class="service-card">
-                <img src="./assets/img/compo3.png" alt="Service 3" class="service-image" data-modal-image="./assets/img/iotrecap.png">
+                <img src="./assets/img/compo3.png" alt="Service 3" class="service-image" data-modal-image="./assets/img/compo3recap.png">
             </div>
-            <button id="faq-button" class="faq-button">FREQUENTLY ASKED QUESTIONS</button>
         </div>
-        </section>
 
+        
+       
+        <section id="how"> </section>
         <img src="./assets/img/fullimg2.png" class="full-img" alt="Tall Image">
+        <section id="prototype"> </section>
         <img src="./assets/img/fullimg3.png" class="full-img" alt="Tall Image">
-
-    <section id="about" class="about">
-        <div class="about-content">
-            <img src="./assets/img/brandtrust.png" alt="About Us" class="about-image">
-        </div>
-
-        <section id="about" class="about">
-            <div class="about-content">
-                <img src="./assets/img/clientreviews.png" alt="About Us" class="about-image">
-            </div>
-        </section>
-    </section>
-
-    <div class="image" style="background-image: url('./assets/img/problemback.png');">
-        <section id="services" class="services">
-           
-            <div class="services-content">
-                <img src="./assets/img/problemintro.png" alt="Our Services" class="services-image">
-            </div>
-            <div class="service-card">
-                <img src="./assets/img/water.png" alt="Service 1" class="service-image" data-modal-image="./assets/img/airecap.png">
-            </div>
-            <div class="service-card">
-                <img src="./assets/img/irrig.png" alt="Service 2" class="service-image" data-modal-image="./assets/img/bcrecap.png">
-            </div>
-            <div class="service-card">
-                <img src="./assets/img/labor.png" alt="Service 3" class="service-image" data-modal-image="./assets/img/iotrecap.png">
-            </div>
-            
-            <button id="faq-button" class="faq-button">FREQUENTLY ASKED QUESTIONS</button>
-            
-            
-        </div>
-        </section>
-
-    <section id="contact" class="contact">
-        <div class="contact-container">
-            <img src="./assets/img/contactus.png" alt="Contact Us Background" class="contact-background">
-            <div class="contact-content">
-                <div class="contact-wrapper">
-                    <div class="social-icons">
-                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <textarea placeholder="Message" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                    <div class="footer">
-                        Empowering Businesses with innovative and sustainable technology solution. <br> 
-                        © 2025 TechVerse Innovation. All rights reserved.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <div class="image" style="background-image: url('./assets/img/CTA.png');"></div>
 
     <script src="./assets/java/script.js"></script>
 </body>
